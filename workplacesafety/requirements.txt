@@ -1,0 +1,7 @@
+azureml-sdk[notebooks, automl]
+numpy
+Pillow
+protobuf
+tensorflow==1.10.0
+jupyter
+matplotlib
