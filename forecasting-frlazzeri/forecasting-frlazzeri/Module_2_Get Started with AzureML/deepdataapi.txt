@@ -1,0 +1,70 @@
+Data Exported
+10/12/2018
+
+Name|CompanyName|SalesPerson|EmailAddress|Founded|Last Order|Sales to Date|City|postal_code|latitude|longitude
+Mr. Seth Juarez|A Bike Store|adventure-works\pamela0|orlando0@adventure-works.com|21-Feb-73|531|95962473|San Francisco|94122|37.758941|-222.48591
+Ms Katherine Harding|Vintage Sport Boutique|adventure-works\david8|kendra0@adventure-works.com|5 November 1880 |68343|342244200|San Francisco|94122|37.758941|-122.48591
+Mrs Kami LeMonds|Trendy Department Stores|adventure-works\shu0|donald1@adventure-works.com|8-Oct-43|83287|92839201|San Francisco|94122|37.758941|-122.48591
+Mr. Andrew  Cencini|Sports Merchandise|adventure-works\pamela0|andrew2@adventure-works.com|1915|58533|43569020|SJ|94115|37.782632|-122.432504
+Mr. Darren  Gehring|Journey Sporting Goods|adventure-works\jillian0|darren0@adventure-works.com|28-Jul-32|65744|38783980|San Antonio|94133|47.609722|-122.333056
+Ms. Rebecca  Laszlo|Instruments and Parts Company|adventure-works\jae0|rebecca2@adventure-works.com|8-Oct-43|18491|82452139|S.A.|94133|37.797817|-122.408597
+Mr. Daniel P. Thompson|Travel Sports|adventure-works\pamela0|daniel2@adventure-works.com|10-Oct-50|49186|40685181|San Francisco|94122|37.758941|-122.48591
+Mr. Paulo H. Lisboa|Elite Bikes|adventure-works\jillian0|paulo0@adventure-works.com|11 August 1897 |87506|284357790|SAN JOSE|94103|37.771437|-122.423892
+Ms. Aidan  Delaney|Paint Supply|adventure-works\jillian0|aidan0@adventure-works.com|10-May-35|24681|147720300|SA|94133|37.797398|-122.405322
+Ms. Hattie J. Haemon|Greater Bike Store|adventure-works\jose1|hattie0@adventure-works.com|1928|79859|99428898|S.A.|94133|37.797468|-122.406147
+Mr. Michael  Brundage|Mechanical Products Ltd.|adventure-works\shu0|michael13@adventure-works.com|24 July 1802 |73581|99395531|San Antonio|94133|37.796718|-122.408714
+Mr. Peter  Kurniawan|Largest Bike Store|adventure-works\jillian0|peter4@adventure-works.com|25 November 1562 |65515|97747689|S.D.|94133|37.798065|-122.406855
+Ms. Pamala M. Kotc|Closest Bicycle Store|adventure-works\jae0|pamala0@adventure-works.com|28 December 1843 |46561|96815539|San Antonio|94112|37.714458|-122.44277
+Ms. Teanna M. Cobb|Another Sporting Goods Company|adventure-works\linda3|teanna0@adventure-works.com|9-Jul-01|37725|95659583|San Jose|94103|37.776775|-122.403305
+Ms. Jane  Clayton|South Bike Company|adventure-works\garrett1|jane1@adventure-works.com|7-Jun-52|66651|94831111|San Diego|94127|37.740654|-122.465389
+Mr. William J. Conner|Urban Sports Emporium|adventure-works\jose1|william1@adventure-works.com|28-Jul-32|54767|93099102|San Francisco|94122|37.754114|-122.47833
+Ms. Erin M. Hagens|Distant Inn|adventure-works\shu0|erin1@adventure-works.com|25-Feb-16|18063|89094058|San Antonio|94133|47.609722|-122.333056
+Ms. Sharon J. Looney|Fitness Hotel|adventure-works\jillian0|sharon2@adventure-works.com|9 May 1828 |40595|88259169|San Antonio|94133|47.609722|-122.333056
+Mr. John L. Colon|Two Wheels Cycle Store|adventure-works\linda3|john14@adventure-works.com|1445|17362|87367939|SAN FRANCISCO|94122|37.763343|-122.481809
+Ms. Linda  Leste|National Manufacturing|adventure-works\garrett1|linda7@adventure-works.com|25-Feb-16|55873|85781125|San Francisco|94122|37.753633|-122.48954
+Mr. Christopher M. Bright|Parcel Express Delivery Service|adventure-works\david8|christopher2@adventure-works.com|17-Sep-08|68716|85201368|SA|94133|37.799388|-122.410223
+Mr. Scott A. Colvin|Westside Cycle Store|adventure-works\jillian0|scott1@adventure-works.com|1928|23896|84330627|San Francisco|94118|37.777292|-122.463496
+Ms. Rosmarie J. Carroll|Aerobic Exercise Company|adventure-works\linda3|rosmarie0@adventure-works.com|11 November 1889 |73778|82603901|San Francisco|94110|37.736304|-122.424432
+Ms. Judy R. Lundahl|Leading Sales & Repair|adventure-works\jillian0|judy1@adventure-works.com|25-Apr-27|86663|81706236|S.D.|94133|37.798065|-122.406855
+Mr. Eugene  Kogan|Mountain Bike Center|adventure-works\shu0|eugene2@adventure-works.com|1854|10203|80624415|San Francisco|94121|37.775653|-122.497387
+Ms. Andrea A. Thomsen|West Side Mart|adventure-works\jae0|andrea1@adventure-works.com|19-Feb-40|87987|79629894|San Francisco|94105|37.788286|-122.401543
+Ms. Della F. Demott Jr|Rewarding Activities Company|adventure-works\garrett1|della0@adventure-works.com|26 July 1165 |99489|79226392|San Antonio|94110|37.754923|-122.423126
+Mr. Sean J. Lunt|Main Bicycle Services|adventure-works\linda3|sean4@adventure-works.com|21-Feb-73|60043|78418124|S.J.|94133|37.79886|-122.408204
+Mr. Joseph M. Lique|Front Sporting Goods|adventure-works\pamela0|joseph2@adventure-works.com|2 January 1920a |27175|77497753|San Jose|94122|37.763428|-122.481736
+Mr. Jeremy  Los|Healthy Activity Store|adventure-works\linda3|jeremy0@adventure-works.com|19-Feb-40|138|74467991|San Antonio|94133|47.609722|-122.333056
+Mr. Stefan  Delmarco|Preferred Bikes|adventure-works\linda3|stefan0@adventure-works.com|25 April 1873 |13484|68755945|San Antonio|94133|37.800897|-122.409189
+Mr. Douglas  Groncki|Locks Company|adventure-works\shu0|douglas2@adventure-works.com|2-Apr-10|34116|64509947|S.J.|94133|37.798427|-122.407507
+Mr. James J. Krow|Out-of-the-Way Hotels|adventure-works\jillian0|james11@adventure-works.com|7-Jun-52|21696|63817685|San Antonio|94133|37.798519|-122.407071
+Ms. Brigid F. Cavendish|Vigorous Sports Store|adventure-works\jae0|brigid0@adventure-works.com|1903|97843|61849150|SJ|94115|37.78332|-122.432647
+Mr. Eric J. Brumfield|Requisite Part Supply|adventure-works\jose1|eric3@adventure-works.com|8 August 1876 |83658|60059857|San Antonio|94105|37.785614|-122.396693
+Ms. Margaret T. Krupka|Outdoor Sports Supply|adventure-works\pamela0|margaret1@adventure-works.com|9-Jul-01|58238|58879314|SA|94133|37.799598|-122.408394
+Mr. David O Lawrence|Gear-Shift Bikes Limited|adventure-works\jose1|david19@adventure-works.com|5 November 1880 |54802|53135406|San Antonio|94133|37.798306|-122.407327
+Mr. Mitch  Kennedy|Reasonable Bicycle Sales|adventure-works\shu0|mitch0@adventure-works.com|24 August 1850 |92789|52228704|San Antonio|94133|37.798744|-122.407408
+Mr. Yale  Li|Rapid Bikes|adventure-works\jose1|yale0@adventure-works.com|25-Apr-27|73749|52146064|SAN FRANCISCO|94110|37.760579|-122.41932
+Ms. Yuhong  Li|Nearby Sporting Goods|adventure-works\jae0|yuhong1@adventure-works.com|21-Feb-73|39837|9263626|SAN FRANCISCO|94110|37.760579|-122.41932
+Mr. George Z. Li|Security Racks and Locks Wholesalers|adventure-works\shu0|george3@adventure-works.com|8 July 1859 |81164|6668992|San Jose|94121|37.782107|-122.483631
+Mr. Michael  Graff|Commercial Sporting Goods|adventure-works\shu0|michael16@adventure-works.com|17-Sep-08|36954|49792892|San Jose|94105|37.787755|-122.399372
+Ms. Anita R. Lucerne|Grand Industries|adventure-works\garrett1|anita0@adventure-works.com|13-Feb-03|39949|48159788|S.A.|94133|37.799837|-122.409517
+Ms. Linda E. Burnett|Travel Systems|adventure-works\jillian0|linda4@adventure-works.com|8 August 1876 |91835|46181671|San Francisco|94110|37.759054|-122.414656
+Mr. Jeffrey  Kurtz|Many Bikes Store|adventure-works\shu0|jeffrey3@adventure-works.com|2 January 1920a |65015|44042128|S.J.|94133|37.799501|-122.409084
+Ms. Phyllis A. Thomas|Red Bicycle Company|adventure-works\jose1|phyllis2@adventure-works.com|25 November 1562 |61738|43973099|SAN FRANCISCO|94118|37.782534|-122.466615
+Mr. Kirk T King|Up-To-Date Sports|adventure-works\jose1|kirk2@adventure-works.com|9 May 1828 |52900|37399497|San Francisco|94122|37.75409|-122.478248
+Mr. Ted  Bremer|Raw Materials Inc|adventure-works\pamela0|ted0@adventure-works.com|25 April 1873 |98765|36979244|San Diego|94122|37.754106|-122.477841
+Mr. Deepak  Kumar|Outdoor Aerobic Systems Company|adventure-works\jae0|deepak0@adventure-works.com|11 November 1889 |73814|35772410|SA|94133|37.799758|-122.407113
+Ms. Connie L. Coffman|Discount Bicycle Specialists|adventure-works\jillian0|connie0@adventure-works.com|1892|50881|33958763|SAN JOSE|94122|37.762304|-122.506543
+Mr. Vamsi  Kuppa|Metal Clearing House|adventure-works\jose1|vamsi1@adventure-works.com|4 July 1767 |10950|31796818|S.J.|94133|37.800036|-122.409817
+Mr. Jon  Grande|Riding Cycles|adventure-works\jae0|jon1@adventure-works.com|24 July 1802 |74699|30020309|San Diego|94116|37.742673|-122.48334
+Ms. Elsa  Leavitt|Frugal Bike Shop|adventure-works\shu0|elsa0@adventure-works.com|10-Oct-50|59906|28797620|San Antonio|94133|37.797828|-122.407474
+Ms. Bonnie B. Lepro|More Bikes!|adventure-works\linda3|bonnie2@adventure-works.com|1915|24024|25051562|San Francisco|94131|37.733449|-122.434241
+Mr. Eric  Lang|Kickstands and Accessories Company|adventure-works\pamela0|eric6@adventure-works.com|1445|67563|23980108|S.A.|94133|37.797933|-122.406018
+Mr. Lucy  Harrington|Metropolitan Sports Supply|adventure-works\shu0|lucy0@adventure-works.com|11 August 1897 |67234|20804221|San Francisco|94112|37.712927|-122.444358
+Ms. Jane P. Greer|Metro Manufacturing|adventure-works\jose1|jane2@adventure-works.com|1892|86862|16395999|SA|94133|37.799003|-122.407274
+Ms. Elsie L. Lewin|Town Industries|adventure-works\jillian0|elsie0@adventure-works.com|13-Feb-03|17046|12122242|SAN FRANCISCO|94118|37.781278|-122.460661
+Ms. Judy J. Thames|Demand Distributors|adventure-works\david8|judy3@adventure-works.com|4 July 1767 |76894|11811339|San Jose|94118|37.77721|-122.462874
+Mr. Alexander J. Deborde|Neighborhood Store|adventure-works\garrett1|alexander1@adventure-works.com|11 August 1897 |51595|10997195|SA|94133|37.799058|-122.407217
+Mr. Derek  Graham|Wholesale Parts|adventure-works\jose1|derek0@adventure-works.com|10-May-35|28436|9346835|San Jose|94110|37.738979|-122.414971
+Mr. Brian  Groth|Latest Accessories Sales|adventure-works\david8|brian5@adventure-works.com|8 July 1859 |52318|8419075|S.D.|94133|37.797828|-122.407444
+Mr. Kerim  Hanif|Bike World|adventure-works\shu0|kerim0@adventure-works.com|26 July 1165 |61375|5167588|San Francisco|94107|37.757923|-122.393914
+Mr. James D. Kramer|Refined Department Stores|adventure-works\jose1|james10@adventure-works.com|1058|53584|4890911|San Antonio|94108|37.790003|-122.408688
+Mr. Lester J. Bowman|Metal Processing Company|adventure-works\garrett1|lester0@adventure-works.com|28 February 1812 |94928|3459059|SJ|94115|37.786407|-122.440057
+Ms. Vanessa J. Tench|Eighth Bike Store|adventure-works\shu0|vanessa0@adventure-works.com|11 November 1889 |50892|2314778|SAN JOSE|94105|37.794347|-122.394932

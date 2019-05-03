@@ -1,0 +1,1487 @@
+2019-03-25 23:15:51,526 - INFO - 157 : Starting usage telemetry collection
+2019-03-25 23:15:54,511 - INFO - 397 : Extracting user Data
+2019-03-25 23:15:54,679 - INFO - 431 : Start creating parent run with DTO:  - name: automl-ojsalesforecasting
+ - subscription_id: 5d9f0467-1e93-45cb-9531-b2f8e715feb1
+ - iterations: 10
+ - primary_metric: normalized_root_mean_squared_error
+ - compute_target: local
+ - task_type: regression
+ - validation_size: 0.0
+ - n_cross_validations: None
+ - y_min: 64
+ - y_max: 716416
+ - num_classes: None
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: True
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: None
+ - mem_in_mb: None
+ - enforce_time_on_windows: False
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoostRegressor', 'XGBoostRegressor', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - time_column_name: WeekStarting
+ - grain_column_names: ['Store', 'Brand']
+ - drop_column_names: ['logQuantity']
+ - max_horizon: None
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: False
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: minimize.
+2019-03-25 23:15:56,293 - INFO - 65 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846]SDK dependencies versions:{"azureml-widgets": "1.0.17", "azureml-train": "1.0.17", "azureml-train-restclients-hyperdrive": "1.0.17", "azureml-train-core": "1.0.17", "azureml-train-automl": "1.0.17.1", "azureml-telemetry": "1.0.17", "azureml-sdk": "1.0.17", "azureml-pipeline": "1.0.17", "azureml-pipeline-steps": "1.0.17", "azureml-pipeline-core": "1.0.17", "azureml-explain-model": "1.0.17", "azureml-dataprep": "1.0.16", "azureml-dataprep-native": "11.2.2", "azureml-core": "1.0.17.1", "azureml-contrib-notebook": "1.0.17"}.
+2019-03-25 23:15:56,643 - INFO - 456 : [ParentRunID:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846] Local run using input X and y.
+2019-03-25 23:15:56,656 - INFO - 459 : Parent Run ID: AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846
+2019-03-25 23:15:56,720 - INFO - 938 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846]Input X datatype is <class 'numpy.ndarray'>, shape is (18987, 17), datasize is 2582232.
+2019-03-25 23:15:56,789 - INFO - 938 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846]Input y datatype is <class 'numpy.ndarray'>, shape is (18987,), datasize is 151896.
+2019-03-25 23:15:56,845 - INFO - 93 : ActivityStarted, PreProcess
+2019-03-25 23:15:56,893 - INFO - 938 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846]Input X_valid datatype is <class 'numpy.ndarray'>, shape is (4980, 17), datasize is 677280.
+2019-03-25 23:15:56,968 - INFO - 938 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846]Input y_valid datatype is <class 'numpy.ndarray'>, shape is (4980,), datasize is 39840.
+2019-03-25 23:15:57,012 - INFO - 490 : The size of raw data is: 3451847
+2019-03-25 23:15:57,093 - INFO - 32 : Pre-processing user data
+2019-03-25 23:15:57,316 - INFO - 759 : [YCol]RawFeatureStats:{"num_unique_vals": "1683", "total_number_vals": "18987", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"integer\"", "average_entry_length": "4.415178806551851", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.08863959551271923"}
+2019-03-25 23:16:01,545 - INFO - 64 : memory usage 214928
+2019-03-25 23:16:01,590 - INFO - 64 : child memory usage 106092
+2019-03-25 23:16:01,680 - INFO - 73 : cpu time 13.424567
+2019-03-25 23:16:01,724 - INFO - 73 : child cpu time 0.124009
+2019-03-25 23:16:02,089 - INFO - 759 : [XColNum:0]RawFeatureStats:{"num_unique_vals": "81", "total_number_vals": "18987", "lengths": "{}", "num_unique_lens": "1", "column_type": "\"datetime\"", "average_entry_length": "19.0", "average_number_spaces": "1.0", "num_na": "{}", "is_datetime": "true", "cardinality_ratio": "0.004266076789382209"}
+2019-03-25 23:16:02,182 - INFO - 759 : [XColNum:1]RawFeatureStats:{"num_unique_vals": "83", "total_number_vals": "18987", "lengths": "{}", "num_unique_lens": "3", "column_type": "\"integer\"", "average_entry_length": "2.3264338758097645", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.004371412018749671"}
+2019-03-25 23:16:02,324 - INFO - 759 : [XColNum:2]RawFeatureStats:{"num_unique_vals": "3", "total_number_vals": "18987", "lengths": "{}", "num_unique_lens": "2", "column_type": "\"string\"", "average_entry_length": "9.666666666666666", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.00015800284405119292"}
+2019-03-25 23:16:02,549 - INFO - 759 : [XColNum:3]RawFeatureStats:{"num_unique_vals": "1683", "total_number_vals": "18987", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "11.814873334386686", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.08863959551271923"}
+2019-03-25 23:16:02,664 - INFO - 759 : [XColNum:4]RawFeatureStats:{"num_unique_vals": "2", "total_number_vals": "18987", "lengths": "{}", "num_unique_lens": "1", "column_type": "\"integer\"", "average_entry_length": "1.0", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.00010533522936746195"}
+2019-03-25 23:16:02,799 - INFO - 759 : [XColNum:5]RawFeatureStats:{"num_unique_vals": "231", "total_number_vals": "18987", "lengths": "{}", "num_unique_lens": "2", "column_type": "\"floating\"", "average_entry_length": "3.994575235687576", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.012166218991941855"}
+2019-03-25 23:16:03,042 - INFO - 759 : [XColNum:6]RawFeatureStats:{"num_unique_vals": "83", "total_number_vals": "18987", "lengths": "{}", "num_unique_lens": "3", "column_type": "\"floating\"", "average_entry_length": "13.223100015800284", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.004371412018749671"}
+2019-03-25 23:16:03,260 - INFO - 759 : [XColNum:7]RawFeatureStats:{"num_unique_vals": "83", "total_number_vals": "18987", "lengths": "{}", "num_unique_lens": "6", "column_type": "\"floating\"", "average_entry_length": "12.84357718438932", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.004371412018749671"}
+2019-03-25 23:16:03,424 - INFO - 759 : [XColNum:8]RawFeatureStats:{"num_unique_vals": "83", "total_number_vals": "18987", "lengths": "{}", "num_unique_lens": "4", "column_type": "\"floating\"", "average_entry_length": "11.47669458050245", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.004371412018749671"}
+2019-03-25 23:16:03,616 - INFO - 759 : [XColNum:9]RawFeatureStats:{"num_unique_vals": "83", "total_number_vals": "18987", "lengths": "{}", "num_unique_lens": "8", "column_type": "\"floating\"", "average_entry_length": "12.646231632169378", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.004371412018749671"}
+2019-03-25 23:16:03,775 - INFO - 759 : [XColNum:10]RawFeatureStats:{"num_unique_vals": "83", "total_number_vals": "18987", "lengths": "{}", "num_unique_lens": "4", "column_type": "\"floating\"", "average_entry_length": "12.698372570706272", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.004371412018749671"}
+2019-03-25 23:16:03,977 - INFO - 759 : [XColNum:11]RawFeatureStats:{"num_unique_vals": "83", "total_number_vals": "18987", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "13.124822246800443", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.004371412018749671"}
+2019-03-25 23:16:05,354 - INFO - 759 : [XColNum:12]RawFeatureStats:{"num_unique_vals": "83", "total_number_vals": "18987", "lengths": "{}", "num_unique_lens": "4", "column_type": "\"floating\"", "average_entry_length": "13.227208089745615", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.004371412018749671"}
+2019-03-25 23:16:06,081 - INFO - 759 : [XColNum:13]RawFeatureStats:{"num_unique_vals": "83", "total_number_vals": "18987", "lengths": "{}", "num_unique_lens": "5", "column_type": "\"floating\"", "average_entry_length": "12.799652393743088", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.004371412018749671"}
+2019-03-25 23:16:06,283 - INFO - 759 : [XColNum:14]RawFeatureStats:{"num_unique_vals": "67", "total_number_vals": "18987", "lengths": "{}", "num_unique_lens": "7", "column_type": "\"floating\"", "average_entry_length": "9.653815768683836", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.0035287301838099754"}
+2019-03-25 23:16:06,491 - INFO - 759 : [XColNum:15]RawFeatureStats:{"num_unique_vals": "83", "total_number_vals": "18987", "lengths": "{}", "num_unique_lens": "3", "column_type": "\"floating\"", "average_entry_length": "12.826828882919893", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.004371412018749671"}
+2019-03-25 23:16:06,667 - INFO - 759 : [XColNum:16]RawFeatureStats:{"num_unique_vals": "83", "total_number_vals": "18987", "lengths": "{}", "num_unique_lens": "4", "column_type": "\"floating\"", "average_entry_length": "12.831884973929531", "average_number_spaces": "0.0", "num_na": "{}", "is_datetime": "false", "cardinality_ratio": "0.004371412018749671"}
+2019-03-25 23:16:08,465 - INFO - 47 : Start construct pre-processing pipeline (TimeSeriesTransformer).
+2019-03-25 23:16:08,499 - INFO - 47 : Finish Construct Pre-Processing Pipeline (TimeSeriesTransformer).
+2019-03-25 23:16:11,860 - INFO - 64 : memory usage 232344
+2019-03-25 23:16:12,611 - INFO - 64 : child memory usage 106092
+2019-03-25 23:16:12,829 - INFO - 73 : cpu time 21.277189
+2019-03-25 23:16:12,907 - INFO - 73 : child cpu time 0.124009
+2019-03-25 23:16:23,098 - INFO - 64 : memory usage 250536
+2019-03-25 23:16:25,098 - INFO - 64 : child memory usage 106092
+2019-03-25 23:16:26,383 - INFO - 73 : cpu time 31.616963
+2019-03-25 23:16:26,504 - INFO - 73 : child cpu time 0.124009
+2019-03-25 23:16:36,870 - INFO - 64 : memory usage 265864
+2019-03-25 23:16:36,959 - INFO - 64 : child memory usage 106092
+2019-03-25 23:16:37,024 - INFO - 73 : cpu time 43.298809
+2019-03-25 23:16:37,058 - INFO - 73 : child cpu time 0.124009
+2019-03-25 23:16:47,176 - INFO - 64 : memory usage 265864
+2019-03-25 23:16:47,268 - INFO - 64 : child memory usage 106092
+2019-03-25 23:16:47,309 - INFO - 73 : cpu time 53.725904
+2019-03-25 23:16:47,389 - INFO - 73 : child cpu time 0.124009
+2019-03-25 23:16:57,550 - INFO - 64 : memory usage 265864
+2019-03-25 23:16:57,634 - INFO - 64 : child memory usage 106092
+2019-03-25 23:16:57,717 - INFO - 73 : cpu time 64.260666
+2019-03-25 23:16:57,741 - INFO - 73 : child cpu time 0.124009
+2019-03-25 23:16:59,334 - INFO - 498 : The size of transformed data is: 6926644
+2019-03-25 23:16:59,347 - INFO - 114 : ActivityCompleted: Activity=PreProcess, HowEnded=Success, Duration=62502.85 [ms]
+2019-03-25 23:17:00,423 - INFO - 566 : Start local loop.
+2019-03-25 23:17:00,437 - INFO - 569 : Start iteration: 0
+2019-03-25 23:17:00,482 - INFO - 93 : ActivityStarted, FitIteration
+2019-03-25 23:17:00,520 - INFO - 93 : ActivityStarted, GetPipeline
+2019-03-25 23:17:00,552 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-03-25 23:17:01,347 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=827.46 [ms]
+2019-03-25 23:17:01,357 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": true, "with_std": false}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "ElasticNet", "module": "sklearn.linear_model", "param_args": [], "param_kwargs": {"alpha": 0.5267894736842105, "l1_ratio": 0.791578947368421, "normalize": false}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "fdcc98506cac91f581e9b6cec9f9daa482221f29"}
+2019-03-25 23:17:01,892 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-03-25 23:17:03,625 - INFO - 180 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0]CPU logical cores: 2, CPU cores: 2, virtual memory: 4107849728, swap memory: 0.
+2019-03-25 23:17:03,658 - INFO - 186 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0]Platform information: Linux-4.14.29-linuxkit-x86_64-with-debian-stretch-sid.
+2019-03-25 23:17:03,705 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][Starting fit_pipeline]memory usage 265864
+2019-03-25 23:17:03,747 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][Starting fit_pipeline]child memory usage 106092
+2019-03-25 23:17:03,781 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][Starting fit_pipeline]cpu time 66.457092
+2019-03-25 23:17:03,814 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][Starting fit_pipeline]child cpu time 0.124009
+2019-03-25 23:17:03,848 - INFO - 72 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0] X datatype is <class 'numpy.ndarray'>, shape is (19710, 34), datasize is 5361120.
+2019-03-25 23:17:03,899 - INFO - 77 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0] y datatype is <class 'numpy.ndarray'>, shape is (19710,), datasize is 157680.
+2019-03-25 23:17:03,933 - INFO - 83 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0] X_valid datatype is <class 'numpy.ndarray'>, shape is (5025, 34), datasize is 1366800.
+2019-03-25 23:17:03,966 - INFO - 89 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0] y_valid datatype is <class 'numpy.ndarray'>, shape is (5025,), datasize is 40200.
+2019-03-25 23:17:03,996 - INFO - 93 : Using child run AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0
+2019-03-25 23:17:04,031 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][Before preprocess]memory usage 265864
+2019-03-25 23:17:04,071 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][Before preprocess]child memory usage 106092
+2019-03-25 23:17:04,129 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][Before preprocess]cpu time 66.473439
+2019-03-25 23:17:04,165 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][Before preprocess]child cpu time 0.124009
+2019-03-25 23:17:04,200 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][After preprocess]memory usage 265864
+2019-03-25 23:17:04,243 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][After preprocess]child memory usage 106092
+2019-03-25 23:17:04,277 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][After preprocess]cpu time 66.482639
+2019-03-25 23:17:04,315 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][After preprocess]child cpu time 0.124009
+2019-03-25 23:17:04,362 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][Before executing pipeline]memory usage 265864
+2019-03-25 23:17:04,427 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][Before executing pipeline]child memory usage 106092
+2019-03-25 23:17:04,460 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][Before executing pipeline]cpu time 66.485158
+2019-03-25 23:17:04,494 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][Before executing pipeline]child cpu time 0.124009
+2019-03-25 23:17:04,524 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": true, "with_std": false}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "ElasticNet", "module": "sklearn.linear_model", "param_args": [], "param_kwargs": {"alpha": 0.5267894736842105, "l1_ratio": 0.791578947368421, "normalize": false}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "fdcc98506cac91f581e9b6cec9f9daa482221f29"}.
+2019-03-25 23:17:04,555 - INFO - 143 : Running with the following AutoML settings:
+ - name: automl-ojsalesforecasting
+ - subscription_id: 5d9f0467-1e93-45cb-9531-b2f8e715feb1
+ - iterations: 10
+ - primary_metric: normalized_root_mean_squared_error
+ - compute_target: local
+ - task_type: regression
+ - validation_size: 0.0
+ - n_cross_validations: None
+ - y_min: 64
+ - y_max: 716416
+ - num_classes: None
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: True
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: None
+ - mem_in_mb: None
+ - enforce_time_on_windows: False
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoostRegressor', 'XGBoostRegressor', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - time_column_name: WeekStarting
+ - grain_column_names: ['Store', 'Brand']
+ - drop_column_names: ['logQuantity']
+ - max_horizon: None
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: False
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: minimize
+2019-03-25 23:17:04,607 - INFO - 224 : ActivityStarted: RunPipeline
+2019-03-25 23:17:07,822 - INFO - 64 : memory usage 265864
+2019-03-25 23:17:08,002 - INFO - 64 : child memory usage 106092
+2019-03-25 23:17:08,070 - INFO - 73 : cpu time 66.561991
+2019-03-25 23:17:08,107 - INFO - 73 : child cpu time 0.124009
+2019-03-25 23:17:18,183 - INFO - 64 : memory usage 265864
+2019-03-25 23:17:18,196 - INFO - 64 : child memory usage 106092
+2019-03-25 23:17:18,251 - INFO - 73 : cpu time 66.631546
+2019-03-25 23:17:18,282 - INFO - 73 : child cpu time 0.124009
+2019-03-25 23:17:23,261 - INFO - 140 : ActivityStarted: Run
+2019-03-25 23:17:23,281 - INFO - 140 : ActivityStarted: TrainValid
+2019-03-25 23:17:23,493 - INFO - 140 : ActivityStarted: TimeFit
+2019-03-25 23:17:24,674 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1181.84[ms]
+2019-03-25 23:17:24,686 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-03-25 23:17:24,727 - INFO - 140 : ActivityStarted: Predict
+2019-03-25 23:17:24,789 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=62.46[ms]
+2019-03-25 23:17:24,827 - INFO - 599 : Computing regression metrics
+2019-03-25 23:17:24,991 - ERROR - 76 : An exception was raised.
+Type: Unclassified
+Class: ValueError
+Message: Input contains NaN, infinity or a value too large for dtype('float64').
+Traceback:
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/azureml/train/automl/_vendor/automl/client/core/common/metrics.py", line 690, in compute_metrics_regression
+    multioutput='uniform_average')
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 315, in mean_squared_log_error
+    sample_weight, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 238, in mean_squared_error
+    y_true, y_pred, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 77, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 453, in check_array
+    _assert_all_finite(array)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 44, in _assert_all_finite
+    " or a value too large for %r." % X.dtype)
+
+2019-03-25 23:17:25,039 - ERROR - 76 : An exception was raised.
+Type: Unclassified
+Class: ValueError
+Message: Input contains NaN, infinity or a value too large for dtype('float64').
+Traceback:
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/azureml/train/automl/_vendor/automl/client/core/common/metrics.py", line 706, in compute_metrics_regression
+    multioutput='uniform_average'))
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 315, in mean_squared_log_error
+    sample_weight, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 238, in mean_squared_error
+    y_true, y_pred, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 77, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 453, in check_array
+    _assert_all_finite(array)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 44, in _assert_all_finite
+    " or a value too large for %r." % X.dtype)
+
+2019-03-25 23:17:25,151 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=465.14[ms]
+2019-03-25 23:17:25,212 - INFO - 154 : ActivityCompleted: Activity=TrainValid, HowEnded=Success, Duration=1930.91[ms]
+2019-03-25 23:17:25,259 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=1997.13[ms]
+2019-03-25 23:17:25,928 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=21320.21[ms]
+2019-03-25 23:17:25,944 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][After executing pipeline]memory usage 265864
+2019-03-25 23:17:26,092 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][After executing pipeline]child memory usage 258448
+2019-03-25 23:17:26,914 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][After executing pipeline]cpu time 66.684093
+2019-03-25 23:17:27,842 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][After executing pipeline]child cpu time 4.684675
+2019-03-25 23:17:27,912 - INFO - 161 : Pipeline execution finished with a score of 0.03046033434739515
+2019-03-25 23:17:27,968 - INFO - 162 : Start logging metrics for child run.
+2019-03-25 23:17:28,030 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-03-25 23:17:28,319 - INFO - 64 : memory usage 267136
+2019-03-25 23:17:28,348 - INFO - 64 : child memory usage 258448
+2019-03-25 23:17:28,391 - INFO - 73 : cpu time 66.959359
+2019-03-25 23:17:28,454 - INFO - 73 : child cpu time 4.684675
+2019-03-25 23:17:30,074 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-03-25 23:17:32,216 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-03-25 23:17:32,359 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-03-25 23:17:32,406 - INFO - 267 : The following metrics have been logged for the child run: {'explained_variance': 0.2530428102056419, 'r2_score': 0.23770658955227664, 'spearman_correlation': 0.5962994642472169, 'mean_absolute_error': 12991.95692994328, 'normalized_mean_absolute_error': 0.018136275085353683, 'median_absolute_error': 9337.36557538713, 'normalized_median_absolute_error': 0.013034605299332074, 'root_mean_squared_error': 21820.32143042521, 'normalized_root_mean_squared_error': 0.03046033434739515, 'root_mean_squared_log_error': nan, 'normalized_root_mean_squared_log_error': nan, 'residuals': <class 'dict'>, 'predicted_true': <class 'dict'>, 'predict_time': <class 'float'>, 'fit_time': <class 'float'>, 'train time': <class 'float'>}.
+2019-03-25 23:17:33,306 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=5276.25[ms]
+2019-03-25 23:17:34,603 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][End fit_pipeline]memory usage 270156
+2019-03-25 23:17:34,620 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][End fit_pipeline]child memory usage 258448
+2019-03-25 23:17:34,780 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][End fit_pipeline]cpu time 67.45592
+2019-03-25 23:17:34,837 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_0][End fit_pipeline]child cpu time 4.684675
+2019-03-25 23:17:34,878 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=32985.36 [ms]
+2019-03-25 23:17:35,135 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=34652.51 [ms]
+2019-03-25 23:17:35,159 - INFO - 569 : Start iteration: 1
+2019-03-25 23:17:35,219 - INFO - 93 : ActivityStarted, FitIteration
+2019-03-25 23:17:35,263 - INFO - 93 : ActivityStarted, GetPipeline
+2019-03-25 23:17:36,645 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-03-25 23:17:38,502 - INFO - 64 : memory usage 270232
+2019-03-25 23:17:38,520 - INFO - 64 : child memory usage 258448
+2019-03-25 23:17:38,555 - INFO - 73 : cpu time 67.570284
+2019-03-25 23:17:38,600 - INFO - 73 : child cpu time 4.684675
+2019-03-25 23:17:38,646 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=3382.61 [ms]
+2019-03-25 23:17:38,673 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": false, "with_std": false}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "ElasticNet", "module": "sklearn.linear_model", "param_args": [], "param_kwargs": {"alpha": 0.05357894736842105, "l1_ratio": 0.9478947368421053, "normalize": false}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "32df138275f39f2b0ba907646396aa556f989aa2"}
+2019-03-25 23:17:40,255 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-03-25 23:17:40,276 - INFO - 180 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1]CPU logical cores: 2, CPU cores: 2, virtual memory: 4107849728, swap memory: 0.
+2019-03-25 23:17:40,311 - INFO - 186 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1]Platform information: Linux-4.14.29-linuxkit-x86_64-with-debian-stretch-sid.
+2019-03-25 23:17:40,437 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][Starting fit_pipeline]memory usage 270240
+2019-03-25 23:17:40,469 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][Starting fit_pipeline]child memory usage 258448
+2019-03-25 23:17:40,500 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][Starting fit_pipeline]cpu time 67.665809
+2019-03-25 23:17:40,585 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][Starting fit_pipeline]child cpu time 4.684675
+2019-03-25 23:17:40,698 - INFO - 72 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1] X datatype is <class 'numpy.ndarray'>, shape is (19710, 34), datasize is 5361120.
+2019-03-25 23:17:40,743 - INFO - 77 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1] y datatype is <class 'numpy.ndarray'>, shape is (19710,), datasize is 157680.
+2019-03-25 23:17:40,787 - INFO - 83 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1] X_valid datatype is <class 'numpy.ndarray'>, shape is (5025, 34), datasize is 1366800.
+2019-03-25 23:17:40,829 - INFO - 89 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1] y_valid datatype is <class 'numpy.ndarray'>, shape is (5025,), datasize is 40200.
+2019-03-25 23:17:40,879 - INFO - 93 : Using child run AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1
+2019-03-25 23:17:40,930 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][Before preprocess]memory usage 270240
+2019-03-25 23:17:40,983 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][Before preprocess]child memory usage 258448
+2019-03-25 23:17:41,030 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][Before preprocess]cpu time 67.689566
+2019-03-25 23:17:41,107 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][Before preprocess]child cpu time 4.684675
+2019-03-25 23:17:41,148 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][After preprocess]memory usage 270240
+2019-03-25 23:17:41,236 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][After preprocess]child memory usage 258448
+2019-03-25 23:17:41,344 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][After preprocess]cpu time 67.706891
+2019-03-25 23:17:41,377 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][After preprocess]child cpu time 4.684675
+2019-03-25 23:17:41,414 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][Before executing pipeline]memory usage 270240
+2019-03-25 23:17:41,452 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][Before executing pipeline]child memory usage 258448
+2019-03-25 23:17:41,510 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][Before executing pipeline]cpu time 67.711224
+2019-03-25 23:17:41,549 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][Before executing pipeline]child cpu time 4.684675
+2019-03-25 23:17:41,598 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": false, "with_std": false}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "ElasticNet", "module": "sklearn.linear_model", "param_args": [], "param_kwargs": {"alpha": 0.05357894736842105, "l1_ratio": 0.9478947368421053, "normalize": false}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "32df138275f39f2b0ba907646396aa556f989aa2"}.
+2019-03-25 23:17:41,631 - INFO - 143 : Running with the following AutoML settings:
+ - name: automl-ojsalesforecasting
+ - subscription_id: 5d9f0467-1e93-45cb-9531-b2f8e715feb1
+ - iterations: 10
+ - primary_metric: normalized_root_mean_squared_error
+ - compute_target: local
+ - task_type: regression
+ - validation_size: 0.0
+ - n_cross_validations: None
+ - y_min: 64
+ - y_max: 716416
+ - num_classes: None
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: True
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: None
+ - mem_in_mb: None
+ - enforce_time_on_windows: False
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoostRegressor', 'XGBoostRegressor', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - time_column_name: WeekStarting
+ - grain_column_names: ['Store', 'Brand']
+ - drop_column_names: ['logQuantity']
+ - max_horizon: None
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: False
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: minimize
+2019-03-25 23:17:41,691 - INFO - 224 : ActivityStarted: RunPipeline
+2019-03-25 23:17:48,640 - INFO - 64 : memory usage 270244
+2019-03-25 23:17:48,983 - INFO - 64 : child memory usage 258448
+2019-03-25 23:17:49,048 - INFO - 73 : cpu time 67.782822
+2019-03-25 23:17:49,085 - INFO - 73 : child cpu time 4.684675
+2019-03-25 23:17:49,904 - INFO - 140 : ActivityStarted: Run
+2019-03-25 23:17:49,914 - INFO - 140 : ActivityStarted: TrainValid
+2019-03-25 23:17:49,972 - INFO - 140 : ActivityStarted: TimeFit
+2019-03-25 23:17:53,246 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=3274.1[ms]
+2019-03-25 23:17:53,434 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-03-25 23:17:53,612 - INFO - 140 : ActivityStarted: Predict
+2019-03-25 23:17:53,656 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=43.65[ms]
+2019-03-25 23:17:53,702 - INFO - 599 : Computing regression metrics
+2019-03-25 23:17:53,767 - ERROR - 76 : An exception was raised.
+Type: Unclassified
+Class: ValueError
+Message: Input contains NaN, infinity or a value too large for dtype('float64').
+Traceback:
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/azureml/train/automl/_vendor/automl/client/core/common/metrics.py", line 690, in compute_metrics_regression
+    multioutput='uniform_average')
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 315, in mean_squared_log_error
+    sample_weight, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 238, in mean_squared_error
+    y_true, y_pred, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 77, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 453, in check_array
+    _assert_all_finite(array)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 44, in _assert_all_finite
+    " or a value too large for %r." % X.dtype)
+
+2019-03-25 23:17:53,846 - ERROR - 76 : An exception was raised.
+Type: Unclassified
+Class: ValueError
+Message: Input contains NaN, infinity or a value too large for dtype('float64').
+Traceback:
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/azureml/train/automl/_vendor/automl/client/core/common/metrics.py", line 706, in compute_metrics_regression
+    multioutput='uniform_average'))
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 315, in mean_squared_log_error
+    sample_weight, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 238, in mean_squared_error
+    y_true, y_pred, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 77, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 453, in check_array
+    _assert_all_finite(array)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 44, in _assert_all_finite
+    " or a value too large for %r." % X.dtype)
+
+2019-03-25 23:17:53,897 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=462.79[ms]
+2019-03-25 23:17:53,945 - INFO - 154 : ActivityCompleted: Activity=TrainValid, HowEnded=Success, Duration=4030.67[ms]
+2019-03-25 23:17:53,976 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=4071.7[ms]
+2019-03-25 23:17:54,501 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=12809.83[ms]
+2019-03-25 23:17:54,514 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][After executing pipeline]memory usage 270244
+2019-03-25 23:17:54,556 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][After executing pipeline]child memory usage 271668
+2019-03-25 23:17:54,589 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][After executing pipeline]cpu time 67.826358
+2019-03-25 23:17:54,653 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][After executing pipeline]child cpu time 11.383839
+2019-03-25 23:17:54,694 - INFO - 161 : Pipeline execution finished with a score of 0.029957422114077474
+2019-03-25 23:17:54,747 - INFO - 162 : Start logging metrics for child run.
+2019-03-25 23:17:54,793 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-03-25 23:17:56,012 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-03-25 23:17:56,637 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-03-25 23:17:58,142 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-03-25 23:17:58,176 - INFO - 267 : The following metrics have been logged for the child run: {'explained_variance': 0.26270667057751684, 'r2_score': 0.262670328227797, 'spearman_correlation': 0.6200167145012362, 'mean_absolute_error': 12069.942214905015, 'normalized_mean_absolute_error': 0.016849177799329124, 'median_absolute_error': 7212.108084624633, 'normalized_median_absolute_error': 0.01006782710821584, 'root_mean_squared_error': 21460.059246263627, 'normalized_root_mean_squared_error': 0.029957422114077474, 'root_mean_squared_log_error': nan, 'normalized_root_mean_squared_log_error': nan, 'predicted_true': <class 'dict'>, 'residuals': <class 'dict'>, 'predict_time': <class 'float'>, 'fit_time': <class 'float'>, 'train time': <class 'float'>}.
+2019-03-25 23:17:59,070 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=4276.64[ms]
+2019-03-25 23:17:59,154 - INFO - 64 : memory usage 272512
+2019-03-25 23:17:59,164 - INFO - 64 : child memory usage 271668
+2019-03-25 23:17:59,212 - INFO - 73 : cpu time 68.371263
+2019-03-25 23:17:59,253 - INFO - 73 : child cpu time 11.383839
+2019-03-25 23:17:59,998 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][End fit_pipeline]memory usage 272520
+2019-03-25 23:18:00,016 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][End fit_pipeline]child memory usage 271668
+2019-03-25 23:18:00,069 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][End fit_pipeline]cpu time 68.448255
+2019-03-25 23:18:00,104 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_1][End fit_pipeline]child cpu time 11.383839
+2019-03-25 23:18:00,143 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=19887.71 [ms]
+2019-03-25 23:18:00,401 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=25182.81 [ms]
+2019-03-25 23:18:00,412 - INFO - 569 : Start iteration: 2
+2019-03-25 23:18:00,445 - INFO - 93 : ActivityStarted, FitIteration
+2019-03-25 23:18:00,478 - INFO - 93 : ActivityStarted, GetPipeline
+2019-03-25 23:18:00,509 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-03-25 23:18:01,334 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=856.13 [ms]
+2019-03-25 23:18:01,982 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": true, "with_std": false}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "ElasticNet", "module": "sklearn.linear_model", "param_args": [], "param_kwargs": {"alpha": 0.1061578947368421, "l1_ratio": 0.16631578947368422, "normalize": false}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "9c96d7c2735a4d68d3357e17012ff4d4fa98ac2f"}
+2019-03-25 23:18:02,820 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-03-25 23:18:02,833 - INFO - 180 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2]CPU logical cores: 2, CPU cores: 2, virtual memory: 4107849728, swap memory: 0.
+2019-03-25 23:18:02,891 - INFO - 186 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2]Platform information: Linux-4.14.29-linuxkit-x86_64-with-debian-stretch-sid.
+2019-03-25 23:18:02,934 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][Starting fit_pipeline]memory usage 272524
+2019-03-25 23:18:02,978 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][Starting fit_pipeline]child memory usage 271668
+2019-03-25 23:18:03,039 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][Starting fit_pipeline]cpu time 68.61842
+2019-03-25 23:18:03,086 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][Starting fit_pipeline]child cpu time 11.383839
+2019-03-25 23:18:03,124 - INFO - 72 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2] X datatype is <class 'numpy.ndarray'>, shape is (19710, 34), datasize is 5361120.
+2019-03-25 23:18:03,164 - INFO - 77 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2] y datatype is <class 'numpy.ndarray'>, shape is (19710,), datasize is 157680.
+2019-03-25 23:18:03,192 - INFO - 83 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2] X_valid datatype is <class 'numpy.ndarray'>, shape is (5025, 34), datasize is 1366800.
+2019-03-25 23:18:03,233 - INFO - 89 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2] y_valid datatype is <class 'numpy.ndarray'>, shape is (5025,), datasize is 40200.
+2019-03-25 23:18:03,284 - INFO - 93 : Using child run AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2
+2019-03-25 23:18:03,317 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][Before preprocess]memory usage 272524
+2019-03-25 23:18:03,354 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][Before preprocess]child memory usage 271668
+2019-03-25 23:18:03,393 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][Before preprocess]cpu time 68.644919
+2019-03-25 23:18:03,425 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][Before preprocess]child cpu time 11.383839
+2019-03-25 23:18:03,460 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][After preprocess]memory usage 272524
+2019-03-25 23:18:03,495 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][After preprocess]child memory usage 271668
+2019-03-25 23:18:03,530 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][After preprocess]cpu time 68.648216
+2019-03-25 23:18:03,578 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][After preprocess]child cpu time 11.383839
+2019-03-25 23:18:03,632 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][Before executing pipeline]memory usage 272524
+2019-03-25 23:18:03,684 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][Before executing pipeline]child memory usage 271668
+2019-03-25 23:18:03,718 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][Before executing pipeline]cpu time 68.651758
+2019-03-25 23:18:03,759 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][Before executing pipeline]child cpu time 11.383839
+2019-03-25 23:18:03,810 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": true, "with_std": false}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "ElasticNet", "module": "sklearn.linear_model", "param_args": [], "param_kwargs": {"alpha": 0.1061578947368421, "l1_ratio": 0.16631578947368422, "normalize": false}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "9c96d7c2735a4d68d3357e17012ff4d4fa98ac2f"}.
+2019-03-25 23:18:03,844 - INFO - 143 : Running with the following AutoML settings:
+ - name: automl-ojsalesforecasting
+ - subscription_id: 5d9f0467-1e93-45cb-9531-b2f8e715feb1
+ - iterations: 10
+ - primary_metric: normalized_root_mean_squared_error
+ - compute_target: local
+ - task_type: regression
+ - validation_size: 0.0
+ - n_cross_validations: None
+ - y_min: 64
+ - y_max: 716416
+ - num_classes: None
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: True
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: None
+ - mem_in_mb: None
+ - enforce_time_on_windows: False
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoostRegressor', 'XGBoostRegressor', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - time_column_name: WeekStarting
+ - grain_column_names: ['Store', 'Brand']
+ - drop_column_names: ['logQuantity']
+ - max_horizon: None
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: False
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: minimize
+2019-03-25 23:18:03,912 - INFO - 224 : ActivityStarted: RunPipeline
+2019-03-25 23:18:09,296 - INFO - 64 : memory usage 272524
+2019-03-25 23:18:10,546 - INFO - 64 : child memory usage 271668
+2019-03-25 23:18:10,634 - INFO - 73 : cpu time 68.733055
+2019-03-25 23:18:12,292 - INFO - 140 : ActivityStarted: TrainValid
+2019-03-25 23:18:12,341 - INFO - 140 : ActivityStarted: TimeFit
+2019-03-25 23:18:12,799 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=458.41[ms]
+2019-03-25 23:18:13,112 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-03-25 23:18:14,979 - INFO - 140 : ActivityStarted: Predict
+2019-03-25 23:18:15,048 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=68.9[ms]
+2019-03-25 23:18:15,111 - INFO - 599 : Computing regression metrics
+2019-03-25 23:18:15,297 - ERROR - 76 : An exception was raised.
+Type: Unclassified
+Class: ValueError
+Message: Input contains NaN, infinity or a value too large for dtype('float64').
+Traceback:
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/azureml/train/automl/_vendor/automl/client/core/common/metrics.py", line 690, in compute_metrics_regression
+    multioutput='uniform_average')
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 315, in mean_squared_log_error
+    sample_weight, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 238, in mean_squared_error
+    y_true, y_pred, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 77, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 453, in check_array
+    _assert_all_finite(array)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 44, in _assert_all_finite
+    " or a value too large for %r." % X.dtype)
+
+2019-03-25 23:18:15,316 - ERROR - 76 : An exception was raised.
+Type: Unclassified
+Class: ValueError
+Message: Input contains NaN, infinity or a value too large for dtype('float64').
+Traceback:
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/azureml/train/automl/_vendor/automl/client/core/common/metrics.py", line 706, in compute_metrics_regression
+    multioutput='uniform_average'))
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 315, in mean_squared_log_error
+    sample_weight, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 238, in mean_squared_error
+    y_true, y_pred, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 77, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 453, in check_array
+    _assert_all_finite(array)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 44, in _assert_all_finite
+    " or a value too large for %r." % X.dtype)
+
+2019-03-25 23:18:15,371 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=2259.03[ms]
+2019-03-25 23:18:15,414 - INFO - 154 : ActivityCompleted: Activity=TrainValid, HowEnded=Success, Duration=3122.04[ms]
+2019-03-25 23:18:15,529 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=3246.13[ms]
+2019-03-25 23:18:16,068 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=12155.59[ms]
+2019-03-25 23:18:16,087 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][After executing pipeline]memory usage 272524
+2019-03-25 23:18:16,215 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][After executing pipeline]child memory usage 272684
+2019-03-25 23:18:16,245 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][After executing pipeline]cpu time 68.783844
+2019-03-25 23:18:16,283 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][After executing pipeline]child cpu time 15.553978
+2019-03-25 23:18:16,347 - INFO - 161 : Pipeline execution finished with a score of 0.030308455475524652
+2019-03-25 23:18:16,379 - INFO - 162 : Start logging metrics for child run.
+2019-03-25 23:18:16,413 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-03-25 23:18:17,680 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-03-25 23:18:17,690 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-03-25 23:18:17,723 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-03-25 23:18:17,800 - INFO - 267 : The following metrics have been logged for the child run: {'explained_variance': 0.2584421140926766, 'r2_score': 0.24528941019666262, 'spearman_correlation': 0.599382635578635, 'mean_absolute_error': 12789.509123908338, 'normalized_mean_absolute_error': 0.017853665689365476, 'median_absolute_error': 9026.803014205674, 'normalized_median_absolute_error': 0.0126010718392713, 'root_mean_squared_error': 21711.522696803037, 'normalized_root_mean_squared_error': 0.030308455475524652, 'root_mean_squared_log_error': nan, 'normalized_root_mean_squared_log_error': nan, 'predicted_true': <class 'dict'>, 'residuals': <class 'dict'>, 'predict_time': <class 'float'>, 'fit_time': <class 'float'>, 'train time': <class 'float'>}.
+2019-03-25 23:18:18,706 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=2292.76[ms]
+2019-03-25 23:18:20,233 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][End fit_pipeline]memory usage 273408
+2019-03-25 23:18:20,249 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][End fit_pipeline]child memory usage 272684
+2019-03-25 23:18:20,308 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][End fit_pipeline]cpu time 69.409074
+2019-03-25 23:18:20,390 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_2][End fit_pipeline]child cpu time 15.553978
+2019-03-25 23:18:20,435 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=17614.35 [ms]
+2019-03-25 23:18:20,731 - INFO - 64 : memory usage 273412
+2019-03-25 23:18:21,155 - INFO - 64 : child memory usage 272684
+2019-03-25 23:18:21,970 - INFO - 73 : cpu time 69.462423
+2019-03-25 23:18:22,020 - INFO - 73 : child cpu time 15.553978
+2019-03-25 23:18:20,759 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=20314.06 [ms]
+2019-03-25 23:18:22,107 - INFO - 569 : Start iteration: 3
+2019-03-25 23:18:22,139 - INFO - 93 : ActivityStarted, FitIteration
+2019-03-25 23:18:22,175 - INFO - 93 : ActivityStarted, GetPipeline
+2019-03-25 23:18:22,206 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-03-25 23:18:23,246 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=1070.95 [ms]
+2019-03-25 23:18:23,256 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": false, "with_std": true}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "ElasticNet", "module": "sklearn.linear_model", "param_args": [], "param_kwargs": {"alpha": 0.15873684210526315, "l1_ratio": 0.6873684210526316, "normalize": false}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "cae574609700c3a511499aead1a621ffad0da9f0"}
+2019-03-25 23:18:24,009 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-03-25 23:18:24,143 - INFO - 180 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3]CPU logical cores: 2, CPU cores: 2, virtual memory: 4107849728, swap memory: 0.
+2019-03-25 23:18:26,544 - INFO - 186 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3]Platform information: Linux-4.14.29-linuxkit-x86_64-with-debian-stretch-sid.
+2019-03-25 23:18:26,652 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][Starting fit_pipeline]memory usage 273412
+2019-03-25 23:18:26,737 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][Starting fit_pipeline]child memory usage 272684
+2019-03-25 23:18:26,839 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][Starting fit_pipeline]cpu time 69.77767
+2019-03-25 23:18:26,873 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][Starting fit_pipeline]child cpu time 15.553978
+2019-03-25 23:18:26,906 - INFO - 72 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3] X datatype is <class 'numpy.ndarray'>, shape is (19710, 34), datasize is 5361120.
+2019-03-25 23:18:26,966 - INFO - 77 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3] y datatype is <class 'numpy.ndarray'>, shape is (19710,), datasize is 157680.
+2019-03-25 23:18:27,045 - INFO - 83 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3] X_valid datatype is <class 'numpy.ndarray'>, shape is (5025, 34), datasize is 1366800.
+2019-03-25 23:18:27,134 - INFO - 89 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3] y_valid datatype is <class 'numpy.ndarray'>, shape is (5025,), datasize is 40200.
+2019-03-25 23:18:27,198 - INFO - 93 : Using child run AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3
+2019-03-25 23:18:27,285 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][Before preprocess]memory usage 273412
+2019-03-25 23:18:27,365 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][Before preprocess]child memory usage 272684
+2019-03-25 23:18:27,414 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][Before preprocess]cpu time 69.809055
+2019-03-25 23:18:27,461 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][Before preprocess]child cpu time 15.553978
+2019-03-25 23:18:27,515 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][After preprocess]memory usage 273412
+2019-03-25 23:18:27,564 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][After preprocess]child memory usage 272684
+2019-03-25 23:18:27,638 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][After preprocess]cpu time 69.825625
+2019-03-25 23:18:27,702 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][After preprocess]child cpu time 15.553978
+2019-03-25 23:18:27,817 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][Before executing pipeline]memory usage 273412
+2019-03-25 23:18:27,878 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][Before executing pipeline]child memory usage 272684
+2019-03-25 23:18:27,978 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][Before executing pipeline]cpu time 69.861505
+2019-03-25 23:18:28,045 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][Before executing pipeline]child cpu time 15.553978
+2019-03-25 23:18:28,201 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": false, "with_std": true}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "ElasticNet", "module": "sklearn.linear_model", "param_args": [], "param_kwargs": {"alpha": 0.15873684210526315, "l1_ratio": 0.6873684210526316, "normalize": false}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "cae574609700c3a511499aead1a621ffad0da9f0"}.
+2019-03-25 23:18:28,240 - INFO - 143 : Running with the following AutoML settings:
+ - name: automl-ojsalesforecasting
+ - subscription_id: 5d9f0467-1e93-45cb-9531-b2f8e715feb1
+ - iterations: 10
+ - primary_metric: normalized_root_mean_squared_error
+ - compute_target: local
+ - task_type: regression
+ - validation_size: 0.0
+ - n_cross_validations: None
+ - y_min: 64
+ - y_max: 716416
+ - num_classes: None
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: True
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: None
+ - mem_in_mb: None
+ - enforce_time_on_windows: False
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoostRegressor', 'XGBoostRegressor', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - time_column_name: WeekStarting
+ - grain_column_names: ['Store', 'Brand']
+ - drop_column_names: ['logQuantity']
+ - max_horizon: None
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: False
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: minimize
+2019-03-25 23:18:28,304 - INFO - 224 : ActivityStarted: RunPipeline
+2019-03-25 23:18:32,068 - INFO - 64 : memory usage 273412
+2019-03-25 23:18:32,088 - INFO - 64 : child memory usage 272684
+2019-03-25 23:18:32,127 - INFO - 73 : cpu time 69.9454
+2019-03-25 23:18:32,184 - INFO - 73 : child cpu time 15.553978
+2019-03-25 23:18:36,537 - INFO - 140 : ActivityStarted: Run
+2019-03-25 23:18:36,631 - INFO - 140 : ActivityStarted: TrainValid
+2019-03-25 23:18:36,695 - INFO - 140 : ActivityStarted: TimeFit
+2019-03-25 23:18:38,897 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=2202.71[ms]
+2019-03-25 23:18:38,914 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-03-25 23:18:38,973 - INFO - 140 : ActivityStarted: Predict
+2019-03-25 23:18:39,026 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=53.96[ms]
+2019-03-25 23:18:39,076 - INFO - 599 : Computing regression metrics
+2019-03-25 23:18:39,172 - ERROR - 76 : An exception was raised.
+Type: Unclassified
+Class: ValueError
+Message: Input contains NaN, infinity or a value too large for dtype('float64').
+Traceback:
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/azureml/train/automl/_vendor/automl/client/core/common/metrics.py", line 690, in compute_metrics_regression
+    multioutput='uniform_average')
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 315, in mean_squared_log_error
+    sample_weight, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 238, in mean_squared_error
+    y_true, y_pred, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 77, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 453, in check_array
+    _assert_all_finite(array)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 44, in _assert_all_finite
+    " or a value too large for %r." % X.dtype)
+
+2019-03-25 23:18:39,213 - ERROR - 76 : An exception was raised.
+Type: Unclassified
+Class: ValueError
+Message: Input contains NaN, infinity or a value too large for dtype('float64').
+Traceback:
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/azureml/train/automl/_vendor/automl/client/core/common/metrics.py", line 706, in compute_metrics_regression
+    multioutput='uniform_average'))
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 315, in mean_squared_log_error
+    sample_weight, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 238, in mean_squared_error
+    y_true, y_pred, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 77, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 453, in check_array
+    _assert_all_finite(array)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 44, in _assert_all_finite
+    " or a value too large for %r." % X.dtype)
+
+2019-03-25 23:18:39,264 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=349.69[ms]
+2019-03-25 23:18:39,325 - INFO - 154 : ActivityCompleted: Activity=TrainValid, HowEnded=Success, Duration=2694.0[ms]
+2019-03-25 23:18:39,363 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=2825.52[ms]
+2019-03-25 23:18:39,903 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=11599.24[ms]
+2019-03-25 23:18:40,277 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][After executing pipeline]memory usage 273412
+2019-03-25 23:18:41,793 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][After executing pipeline]child memory usage 272684
+2019-03-25 23:18:41,869 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][After executing pipeline]cpu time 69.990244
+2019-03-25 23:18:41,912 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][After executing pipeline]child cpu time 21.688084
+2019-03-25 23:18:41,946 - INFO - 161 : Pipeline execution finished with a score of 0.029767386563775852
+2019-03-25 23:18:41,992 - INFO - 162 : Start logging metrics for child run.
+2019-03-25 23:18:42,024 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-03-25 23:18:42,232 - INFO - 64 : memory usage 273412
+2019-03-25 23:18:42,248 - INFO - 64 : child memory usage 272684
+2019-03-25 23:18:42,296 - INFO - 73 : cpu time 70.198706
+2019-03-25 23:18:42,330 - INFO - 73 : child cpu time 21.688084
+2019-03-25 23:18:43,169 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-03-25 23:18:43,183 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-03-25 23:18:43,247 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-03-25 23:18:43,299 - INFO - 267 : The following metrics have been logged for the child run: {'explained_variance': 0.27397388409348855, 'r2_score': 0.2719951910902141, 'spearman_correlation': 0.6233030781464416, 'mean_absolute_error': 12051.268734011079, 'normalized_mean_absolute_error': 0.016823110334041196, 'median_absolute_error': 7086.981233492494, 'normalized_median_absolute_error': 0.009893154808659002, 'root_mean_squared_error': 21323.92689973396, 'normalized_root_mean_squared_error': 0.029767386563775852, 'root_mean_squared_log_error': nan, 'normalized_root_mean_squared_log_error': nan, 'predicted_true': <class 'dict'>, 'residuals': <class 'dict'>, 'predict_time': <class 'float'>, 'fit_time': <class 'float'>, 'train time': <class 'float'>}.
+2019-03-25 23:18:44,149 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=2124.69[ms]
+2019-03-25 23:18:45,153 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][End fit_pipeline]memory usage 273412
+2019-03-25 23:18:45,800 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][End fit_pipeline]child memory usage 272684
+2019-03-25 23:18:48,580 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][End fit_pipeline]cpu time 70.61485
+2019-03-25 23:18:48,678 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_3][End fit_pipeline]child cpu time 21.688084
+2019-03-25 23:18:48,868 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=24859.4 [ms]
+2019-03-25 23:18:49,189 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=27050.06 [ms]
+2019-03-25 23:18:49,262 - INFO - 569 : Start iteration: 4
+2019-03-25 23:18:49,319 - INFO - 93 : ActivityStarted, FitIteration
+2019-03-25 23:18:49,364 - INFO - 93 : ActivityStarted, GetPipeline
+2019-03-25 23:18:49,418 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-03-25 23:18:50,335 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=971.2 [ms]
+2019-03-25 23:18:50,348 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": false, "with_std": false}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "ElasticNet", "module": "sklearn.linear_model", "param_args": [], "param_kwargs": {"alpha": 0.6845263157894736, "l1_ratio": 0.6352631578947369, "normalize": false}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "d793d97326cbeb52f819d09c6f88e0d31ded8f43"}
+2019-03-25 23:18:50,967 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-03-25 23:18:50,979 - INFO - 180 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4]CPU logical cores: 2, CPU cores: 2, virtual memory: 4107849728, swap memory: 0.
+2019-03-25 23:18:51,023 - INFO - 186 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4]Platform information: Linux-4.14.29-linuxkit-x86_64-with-debian-stretch-sid.
+2019-03-25 23:18:51,066 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][Starting fit_pipeline]memory usage 273412
+2019-03-25 23:18:51,183 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][Starting fit_pipeline]child memory usage 272684
+2019-03-25 23:18:51,218 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][Starting fit_pipeline]cpu time 70.86832
+2019-03-25 23:18:51,251 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][Starting fit_pipeline]child cpu time 21.688084
+2019-03-25 23:18:51,295 - INFO - 72 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4] X datatype is <class 'numpy.ndarray'>, shape is (19710, 34), datasize is 5361120.
+2019-03-25 23:18:51,352 - INFO - 77 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4] y datatype is <class 'numpy.ndarray'>, shape is (19710,), datasize is 157680.
+2019-03-25 23:18:51,403 - INFO - 83 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4] X_valid datatype is <class 'numpy.ndarray'>, shape is (5025, 34), datasize is 1366800.
+2019-03-25 23:18:51,441 - INFO - 89 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4] y_valid datatype is <class 'numpy.ndarray'>, shape is (5025,), datasize is 40200.
+2019-03-25 23:18:51,473 - INFO - 93 : Using child run AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4
+2019-03-25 23:18:51,506 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][Before preprocess]memory usage 273412
+2019-03-25 23:18:51,540 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][Before preprocess]child memory usage 272684
+2019-03-25 23:18:51,580 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][Before preprocess]cpu time 70.897109
+2019-03-25 23:18:51,992 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][Before preprocess]child cpu time 21.688084
+2019-03-25 23:18:52,381 - INFO - 64 : memory usage 273412
+2019-03-25 23:18:54,382 - INFO - 64 : child memory usage 272684
+2019-03-25 23:18:54,507 - INFO - 73 : cpu time 70.931125
+2019-03-25 23:18:54,552 - INFO - 73 : child cpu time 21.688084
+2019-03-25 23:18:54,232 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][After preprocess]memory usage 273412
+2019-03-25 23:18:54,661 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][After preprocess]child memory usage 272684
+2019-03-25 23:18:54,722 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][After preprocess]cpu time 70.934105
+2019-03-25 23:18:54,768 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][After preprocess]child cpu time 21.688084
+2019-03-25 23:18:54,854 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][Before executing pipeline]memory usage 273412
+2019-03-25 23:18:54,974 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][Before executing pipeline]child memory usage 272684
+2019-03-25 23:18:55,066 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][Before executing pipeline]cpu time 70.98472
+2019-03-25 23:18:55,165 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][Before executing pipeline]child cpu time 21.688084
+2019-03-25 23:18:55,210 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": false, "with_std": false}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "ElasticNet", "module": "sklearn.linear_model", "param_args": [], "param_kwargs": {"alpha": 0.6845263157894736, "l1_ratio": 0.6352631578947369, "normalize": false}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "d793d97326cbeb52f819d09c6f88e0d31ded8f43"}.
+2019-03-25 23:18:55,243 - INFO - 143 : Running with the following AutoML settings:
+ - name: automl-ojsalesforecasting
+ - subscription_id: 5d9f0467-1e93-45cb-9531-b2f8e715feb1
+ - iterations: 10
+ - primary_metric: normalized_root_mean_squared_error
+ - compute_target: local
+ - task_type: regression
+ - validation_size: 0.0
+ - n_cross_validations: None
+ - y_min: 64
+ - y_max: 716416
+ - num_classes: None
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: True
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: None
+ - mem_in_mb: None
+ - enforce_time_on_windows: False
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoostRegressor', 'XGBoostRegressor', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - time_column_name: WeekStarting
+ - grain_column_names: ['Store', 'Brand']
+ - drop_column_names: ['logQuantity']
+ - max_horizon: None
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: False
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: minimize
+2019-03-25 23:18:55,291 - INFO - 224 : ActivityStarted: RunPipeline
+2019-03-25 23:19:02,795 - INFO - 140 : ActivityStarted: Run
+2019-03-25 23:19:02,805 - INFO - 140 : ActivityStarted: TrainValid
+2019-03-25 23:19:02,846 - INFO - 140 : ActivityStarted: TimeFit
+2019-03-25 23:19:03,004 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=158.55[ms]
+2019-03-25 23:19:03,014 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-03-25 23:19:03,068 - INFO - 140 : ActivityStarted: Predict
+2019-03-25 23:19:03,103 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=35.17[ms]
+2019-03-25 23:19:03,146 - INFO - 599 : Computing regression metrics
+2019-03-25 23:19:03,242 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=227.83[ms]
+2019-03-25 23:19:03,270 - INFO - 154 : ActivityCompleted: Activity=TrainValid, HowEnded=Success, Duration=464.9[ms]
+2019-03-25 23:19:03,359 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=563.71[ms]
+2019-03-25 23:19:03,869 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=8578.7[ms]
+2019-03-25 23:19:03,883 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][After executing pipeline]memory usage 273412
+2019-03-25 23:19:03,923 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][After executing pipeline]child memory usage 272684
+2019-03-25 23:19:03,956 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][After executing pipeline]cpu time 71.074406
+2019-03-25 23:19:03,992 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][After executing pipeline]child cpu time 25.748928
+2019-03-25 23:19:04,028 - INFO - 161 : Pipeline execution finished with a score of 0.03135561309322495
+2019-03-25 23:19:04,069 - INFO - 162 : Start logging metrics for child run.
+2019-03-25 23:19:04,112 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-03-25 23:19:04,605 - INFO - 64 : memory usage 273412
+2019-03-25 23:19:04,618 - INFO - 64 : child memory usage 272684
+2019-03-25 23:19:04,723 - INFO - 73 : cpu time 71.359358
+2019-03-25 23:19:04,746 - INFO - 73 : child cpu time 25.748928
+2019-03-25 23:19:05,359 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-03-25 23:19:05,372 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-03-25 23:19:05,410 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-03-25 23:19:06,989 - INFO - 267 : The following metrics have been logged for the child run: {'explained_variance': 0.21246849661367362, 'r2_score': 0.19223798373995826, 'spearman_correlation': 0.5703738946637513, 'mean_absolute_error': 13794.404861933788, 'normalized_mean_absolute_error': 0.019256461714260292, 'median_absolute_error': 10694.91266783372, 'normalized_median_absolute_error': 0.014929689130251217, 'root_mean_squared_error': 22461.656150557883, 'normalized_root_mean_squared_error': 0.03135561309322495, 'root_mean_squared_log_error': 0.9779671982474349, 'normalized_root_mean_squared_log_error': 0.10507155476735619, 'predicted_true': <class 'dict'>, 'residuals': <class 'dict'>, 'predict_time': <class 'float'>, 'fit_time': <class 'float'>, 'train time': <class 'float'>}.
+2019-03-25 23:19:08,156 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=4044.18[ms]
+2019-03-25 23:19:08,962 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][End fit_pipeline]memory usage 273412
+2019-03-25 23:19:08,974 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][End fit_pipeline]child memory usage 272684
+2019-03-25 23:19:09,023 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][End fit_pipeline]cpu time 71.698696
+2019-03-25 23:19:09,066 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_4][End fit_pipeline]child cpu time 25.748928
+2019-03-25 23:19:09,103 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=18135.75 [ms]
+2019-03-25 23:19:09,379 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=20059.72 [ms]
+2019-03-25 23:19:09,388 - INFO - 569 : Start iteration: 5
+2019-03-25 23:19:09,422 - INFO - 93 : ActivityStarted, FitIteration
+2019-03-25 23:19:09,454 - INFO - 93 : ActivityStarted, GetPipeline
+2019-03-25 23:19:09,501 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-03-25 23:19:10,470 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=1016.31 [ms]
+2019-03-25 23:19:11,703 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": false, "with_std": true}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "ElasticNet", "module": "sklearn.linear_model", "param_args": [], "param_kwargs": {"alpha": 0.001, "l1_ratio": 0.9478947368421053, "normalize": false}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "d925751fd9eac1f71df8b9fccd672dc70cbea612"}
+2019-03-25 23:19:12,334 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-03-25 23:19:12,369 - INFO - 180 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5]CPU logical cores: 2, CPU cores: 2, virtual memory: 4107849728, swap memory: 0.
+2019-03-25 23:19:12,433 - INFO - 186 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5]Platform information: Linux-4.14.29-linuxkit-x86_64-with-debian-stretch-sid.
+2019-03-25 23:19:12,479 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][Starting fit_pipeline]memory usage 273412
+2019-03-25 23:19:12,515 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][Starting fit_pipeline]child memory usage 272684
+2019-03-25 23:19:12,551 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][Starting fit_pipeline]cpu time 71.906311
+2019-03-25 23:19:12,586 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][Starting fit_pipeline]child cpu time 25.748928
+2019-03-25 23:19:12,631 - INFO - 72 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5] X datatype is <class 'numpy.ndarray'>, shape is (19710, 34), datasize is 5361120.
+2019-03-25 23:19:12,683 - INFO - 77 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5] y datatype is <class 'numpy.ndarray'>, shape is (19710,), datasize is 157680.
+2019-03-25 23:19:12,747 - INFO - 83 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5] X_valid datatype is <class 'numpy.ndarray'>, shape is (5025, 34), datasize is 1366800.
+2019-03-25 23:19:12,787 - INFO - 89 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5] y_valid datatype is <class 'numpy.ndarray'>, shape is (5025,), datasize is 40200.
+2019-03-25 23:19:14,002 - INFO - 93 : Using child run AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5
+2019-03-25 23:19:14,041 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][Before preprocess]memory usage 273412
+2019-03-25 23:19:14,080 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][Before preprocess]child memory usage 272684
+2019-03-25 23:19:14,111 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][Before preprocess]cpu time 71.958153
+2019-03-25 23:19:14,141 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][Before preprocess]child cpu time 25.748928
+2019-03-25 23:19:14,172 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][After preprocess]memory usage 273412
+2019-03-25 23:19:14,231 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][After preprocess]child memory usage 272684
+2019-03-25 23:19:14,266 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][After preprocess]cpu time 71.971165
+2019-03-25 23:19:14,326 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][After preprocess]child cpu time 25.748928
+2019-03-25 23:19:14,421 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][Before executing pipeline]memory usage 273412
+2019-03-25 23:19:14,477 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][Before executing pipeline]child memory usage 272684
+2019-03-25 23:19:14,553 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][Before executing pipeline]cpu time 71.977588
+2019-03-25 23:19:14,597 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][Before executing pipeline]child cpu time 25.748928
+2019-03-25 23:19:14,666 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": false, "with_std": true}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "ElasticNet", "module": "sklearn.linear_model", "param_args": [], "param_kwargs": {"alpha": 0.001, "l1_ratio": 0.9478947368421053, "normalize": false}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "d925751fd9eac1f71df8b9fccd672dc70cbea612"}.
+2019-03-25 23:19:14,712 - INFO - 143 : Running with the following AutoML settings:
+ - name: automl-ojsalesforecasting
+ - subscription_id: 5d9f0467-1e93-45cb-9531-b2f8e715feb1
+ - iterations: 10
+ - primary_metric: normalized_root_mean_squared_error
+ - compute_target: local
+ - task_type: regression
+ - validation_size: 0.0
+ - n_cross_validations: None
+ - y_min: 64
+ - y_max: 716416
+ - num_classes: None
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: True
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: None
+ - mem_in_mb: None
+ - enforce_time_on_windows: False
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoostRegressor', 'XGBoostRegressor', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - time_column_name: WeekStarting
+ - grain_column_names: ['Store', 'Brand']
+ - drop_column_names: ['logQuantity']
+ - max_horizon: None
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: False
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: minimize
+2019-03-25 23:19:14,773 - INFO - 224 : ActivityStarted: RunPipeline
+2019-03-25 23:19:14,795 - INFO - 64 : memory usage 273412
+2019-03-25 23:19:14,866 - INFO - 64 : child memory usage 272684
+2019-03-25 23:19:14,946 - INFO - 73 : cpu time 72.003528
+2019-03-25 23:19:14,993 - INFO - 73 : child cpu time 25.748928
+2019-03-25 23:19:24,006 - INFO - 140 : ActivityStarted: Run
+2019-03-25 23:19:24,027 - INFO - 140 : ActivityStarted: TrainValid
+2019-03-25 23:19:24,180 - INFO - 140 : ActivityStarted: TimeFit
+2019-03-25 23:19:25,037 - INFO - 64 : memory usage 273412
+2019-03-25 23:19:25,053 - INFO - 64 : child memory usage 272684
+2019-03-25 23:19:25,107 - INFO - 73 : cpu time 72.085887
+2019-03-25 23:19:25,160 - INFO - 73 : child cpu time 25.748928
+2019-03-25 23:19:26,731 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=2550.88[ms]
+2019-03-25 23:19:27,161 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-03-25 23:19:27,205 - INFO - 140 : ActivityStarted: Predict
+2019-03-25 23:19:27,255 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=49.04[ms]
+2019-03-25 23:19:27,295 - INFO - 599 : Computing regression metrics
+2019-03-25 23:19:27,375 - ERROR - 76 : An exception was raised.
+Type: Unclassified
+Class: ValueError
+Message: Input contains NaN, infinity or a value too large for dtype('float64').
+Traceback:
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/azureml/train/automl/_vendor/automl/client/core/common/metrics.py", line 690, in compute_metrics_regression
+    multioutput='uniform_average')
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 315, in mean_squared_log_error
+    sample_weight, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 238, in mean_squared_error
+    y_true, y_pred, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 77, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 453, in check_array
+    _assert_all_finite(array)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 44, in _assert_all_finite
+    " or a value too large for %r." % X.dtype)
+
+2019-03-25 23:19:27,387 - ERROR - 76 : An exception was raised.
+Type: Unclassified
+Class: ValueError
+Message: Input contains NaN, infinity or a value too large for dtype('float64').
+Traceback:
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/azureml/train/automl/_vendor/automl/client/core/common/metrics.py", line 706, in compute_metrics_regression
+    multioutput='uniform_average'))
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 315, in mean_squared_log_error
+    sample_weight, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 238, in mean_squared_error
+    y_true, y_pred, multioutput)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/metrics/regression.py", line 77, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 453, in check_array
+    _assert_all_finite(array)
+  File "/home/nbuser/anaconda3_501/lib/python3.6/site-packages/sklearn/utils/validation.py", line 44, in _assert_all_finite
+    " or a value too large for %r." % X.dtype)
+
+2019-03-25 23:19:27,433 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=272.29[ms]
+2019-03-25 23:19:27,480 - INFO - 154 : ActivityCompleted: Activity=TrainValid, HowEnded=Success, Duration=3452.6[ms]
+2019-03-25 23:19:27,565 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=3558.3[ms]
+2019-03-25 23:19:28,224 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=13451.63[ms]
+2019-03-25 23:19:29,201 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][After executing pipeline]memory usage 273412
+2019-03-25 23:19:29,288 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][After executing pipeline]child memory usage 272684
+2019-03-25 23:19:29,334 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][After executing pipeline]cpu time 72.120021
+2019-03-25 23:19:29,387 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][After executing pipeline]child cpu time 32.138199
+2019-03-25 23:19:29,450 - INFO - 161 : Pipeline execution finished with a score of 0.029943180665911066
+2019-03-25 23:19:29,501 - INFO - 162 : Start logging metrics for child run.
+2019-03-25 23:19:29,559 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-03-25 23:19:30,754 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-03-25 23:19:31,623 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-03-25 23:19:31,749 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-03-25 23:19:31,798 - INFO - 267 : The following metrics have been logged for the child run: {'explained_variance': 0.2634054051688399, 'r2_score': 0.26337119937177134, 'spearman_correlation': 0.6249537082568442, 'mean_absolute_error': 12197.314082511735, 'normalized_mean_absolute_error': 0.01702698405603912, 'median_absolute_error': 7339.808277145028, 'normalized_median_absolute_error': 0.01024609169395078, 'root_mean_squared_error': 21449.857356386725, 'normalized_root_mean_squared_error': 0.029943180665911066, 'root_mean_squared_log_error': nan, 'normalized_root_mean_squared_log_error': nan, 'predicted_true': <class 'dict'>, 'residuals': <class 'dict'>, 'predict_time': <class 'float'>, 'fit_time': <class 'float'>, 'train time': <class 'float'>}.
+2019-03-25 23:19:32,667 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=3107.95[ms]
+2019-03-25 23:19:33,554 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][End fit_pipeline]memory usage 273412
+2019-03-25 23:19:33,567 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][End fit_pipeline]child memory usage 272684
+2019-03-25 23:19:33,608 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][End fit_pipeline]cpu time 72.700616
+2019-03-25 23:19:33,640 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_5][End fit_pipeline]child cpu time 32.138199
+2019-03-25 23:19:33,675 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=21340.88 [ms]
+2019-03-25 23:19:33,947 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=24525.56 [ms]
+2019-03-25 23:19:34,407 - INFO - 569 : Start iteration: 6
+2019-03-25 23:19:35,208 - INFO - 64 : memory usage 273412
+2019-03-25 23:19:36,616 - INFO - 64 : child memory usage 272684
+2019-03-25 23:19:36,650 - INFO - 73 : cpu time 72.774325
+2019-03-25 23:19:36,567 - INFO - 93 : ActivityStarted, FitIteration
+2019-03-25 23:19:36,725 - INFO - 93 : ActivityStarted, GetPipeline
+2019-03-25 23:19:36,689 - INFO - 73 : child cpu time 32.138199
+2019-03-25 23:19:36,764 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-03-25 23:19:39,469 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=2744.88 [ms]
+2019-03-25 23:19:41,305 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "RobustScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"quantile_range": [10, 90], "with_centering": false, "with_scaling": true}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "ElasticNet", "module": "sklearn.linear_model", "param_args": [], "param_kwargs": {"alpha": 0.4216315789473684, "l1_ratio": 0.7394736842105263, "normalize": false}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "b9b2bbfeb59ab0a92282a8e8d959ea48b81c20b5"}
+2019-03-25 23:19:41,984 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-03-25 23:19:42,033 - INFO - 180 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6]CPU logical cores: 2, CPU cores: 2, virtual memory: 4107849728, swap memory: 0.
+2019-03-25 23:19:42,086 - INFO - 186 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6]Platform information: Linux-4.14.29-linuxkit-x86_64-with-debian-stretch-sid.
+2019-03-25 23:19:42,155 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][Starting fit_pipeline]memory usage 273412
+2019-03-25 23:19:42,193 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][Starting fit_pipeline]child memory usage 272684
+2019-03-25 23:19:42,234 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][Starting fit_pipeline]cpu time 72.928841
+2019-03-25 23:19:42,268 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][Starting fit_pipeline]child cpu time 32.138199
+2019-03-25 23:19:42,318 - INFO - 72 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6] X datatype is <class 'numpy.ndarray'>, shape is (19710, 34), datasize is 5361120.
+2019-03-25 23:19:42,352 - INFO - 77 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6] y datatype is <class 'numpy.ndarray'>, shape is (19710,), datasize is 157680.
+2019-03-25 23:19:42,395 - INFO - 83 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6] X_valid datatype is <class 'numpy.ndarray'>, shape is (5025, 34), datasize is 1366800.
+2019-03-25 23:19:42,433 - INFO - 89 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6] y_valid datatype is <class 'numpy.ndarray'>, shape is (5025,), datasize is 40200.
+2019-03-25 23:19:42,465 - INFO - 93 : Using child run AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6
+2019-03-25 23:19:42,501 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][Before preprocess]memory usage 273412
+2019-03-25 23:19:42,538 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][Before preprocess]child memory usage 272684
+2019-03-25 23:19:42,605 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][Before preprocess]cpu time 72.952679
+2019-03-25 23:19:42,639 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][Before preprocess]child cpu time 32.138199
+2019-03-25 23:19:42,711 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][After preprocess]memory usage 273412
+2019-03-25 23:19:42,911 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][After preprocess]child memory usage 272684
+2019-03-25 23:19:42,945 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][After preprocess]cpu time 72.969047
+2019-03-25 23:19:42,982 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][After preprocess]child cpu time 32.138199
+2019-03-25 23:19:43,016 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][Before executing pipeline]memory usage 273412
+2019-03-25 23:19:43,270 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][Before executing pipeline]child memory usage 272684
+2019-03-25 23:19:43,308 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][Before executing pipeline]cpu time 72.973349
+2019-03-25 23:19:43,343 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][Before executing pipeline]child cpu time 32.138199
+2019-03-25 23:19:43,378 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "RobustScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"quantile_range": [10, 90], "with_centering": false, "with_scaling": true}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "ElasticNet", "module": "sklearn.linear_model", "param_args": [], "param_kwargs": {"alpha": 0.4216315789473684, "l1_ratio": 0.7394736842105263, "normalize": false}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "b9b2bbfeb59ab0a92282a8e8d959ea48b81c20b5"}.
+2019-03-25 23:19:43,425 - INFO - 143 : Running with the following AutoML settings:
+ - name: automl-ojsalesforecasting
+ - subscription_id: 5d9f0467-1e93-45cb-9531-b2f8e715feb1
+ - iterations: 10
+ - primary_metric: normalized_root_mean_squared_error
+ - compute_target: local
+ - task_type: regression
+ - validation_size: 0.0
+ - n_cross_validations: None
+ - y_min: 64
+ - y_max: 716416
+ - num_classes: None
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: True
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: None
+ - mem_in_mb: None
+ - enforce_time_on_windows: False
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoostRegressor', 'XGBoostRegressor', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - time_column_name: WeekStarting
+ - grain_column_names: ['Store', 'Brand']
+ - drop_column_names: ['logQuantity']
+ - max_horizon: None
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: False
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: minimize
+2019-03-25 23:19:43,496 - INFO - 224 : ActivityStarted: RunPipeline
+2019-03-25 23:19:47,038 - INFO - 64 : memory usage 273412
+2019-03-25 23:19:47,060 - INFO - 64 : child memory usage 272684
+2019-03-25 23:19:47,103 - INFO - 73 : cpu time 73.066027
+2019-03-25 23:19:47,175 - INFO - 73 : child cpu time 32.138199
+2019-03-25 23:19:51,422 - INFO - 140 : ActivityStarted: Run
+2019-03-25 23:19:51,433 - INFO - 140 : ActivityStarted: TrainValid
+2019-03-25 23:19:51,582 - INFO - 140 : ActivityStarted: TimeFit
+2019-03-25 23:19:52,700 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=1118.01[ms]
+2019-03-25 23:19:52,719 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-03-25 23:19:52,751 - INFO - 140 : ActivityStarted: Predict
+2019-03-25 23:19:52,795 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=43.66[ms]
+2019-03-25 23:19:52,829 - INFO - 599 : Computing regression metrics
+2019-03-25 23:19:52,889 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=170.4[ms]
+2019-03-25 23:19:52,945 - INFO - 154 : ActivityCompleted: Activity=TrainValid, HowEnded=Success, Duration=1511.52[ms]
+2019-03-25 23:19:53,003 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=1580.68[ms]
+2019-03-25 23:19:53,461 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=9965.42[ms]
+2019-03-25 23:19:53,473 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][After executing pipeline]memory usage 273412
+2019-03-25 23:19:53,559 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][After executing pipeline]child memory usage 272684
+2019-03-25 23:19:53,597 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][After executing pipeline]cpu time 73.127418
+2019-03-25 23:19:53,659 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][After executing pipeline]child cpu time 36.153761
+2019-03-25 23:19:53,687 - INFO - 161 : Pipeline execution finished with a score of 0.030535785609648754
+2019-03-25 23:19:53,720 - INFO - 162 : Start logging metrics for child run.
+2019-03-25 23:19:53,761 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-03-25 23:19:55,053 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-03-25 23:19:55,064 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-03-25 23:19:55,097 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-03-25 23:19:55,160 - INFO - 267 : The following metrics have been logged for the child run: {'explained_variance': 0.25459142668044954, 'r2_score': 0.23392546004184223, 'spearman_correlation': 0.5807356775230644, 'mean_absolute_error': 13358.525178619751, 'normalized_mean_absolute_error': 0.01864799034360168, 'median_absolute_error': 9884.179258462507, 'normalized_median_absolute_error': 0.013797936291742757, 'root_mean_squared_error': 21874.371093043104, 'normalized_root_mean_squared_error': 0.030535785609648754, 'root_mean_squared_log_error': 0.937990222565168, 'normalized_root_mean_squared_log_error': 0.10077647922968992, 'predicted_true': <class 'dict'>, 'residuals': <class 'dict'>, 'predict_time': <class 'float'>, 'fit_time': <class 'float'>, 'train time': <class 'float'>}.
+2019-03-25 23:19:56,046 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=2285.1[ms]
+2019-03-25 23:19:56,914 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][End fit_pipeline]memory usage 273412
+2019-03-25 23:19:56,936 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][End fit_pipeline]child memory usage 272684
+2019-03-25 23:19:56,978 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][End fit_pipeline]cpu time 73.781626
+2019-03-25 23:19:57,022 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_6][End fit_pipeline]child cpu time 36.153761
+2019-03-25 23:19:57,072 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=15088.73 [ms]
+2019-03-25 23:19:57,274 - INFO - 64 : memory usage 273412
+2019-03-25 23:19:57,288 - INFO - 64 : child memory usage 272684
+2019-03-25 23:19:57,335 - INFO - 73 : cpu time 73.825524
+2019-03-25 23:19:57,406 - INFO - 73 : child cpu time 36.153761
+2019-03-25 23:19:57,370 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=20803.21 [ms]
+2019-03-25 23:19:57,485 - INFO - 569 : Start iteration: 7
+2019-03-25 23:19:57,527 - INFO - 93 : ActivityStarted, FitIteration
+2019-03-25 23:19:57,569 - INFO - 93 : ActivityStarted, GetPipeline
+2019-03-25 23:19:57,628 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-03-25 23:19:58,424 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=854.27 [ms]
+2019-03-25 23:19:58,442 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": false, "with_std": false}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LightGBMRegressor", "module": "automl.client.core.common.model_wrappers", "param_args": [], "param_kwargs": {"boosting_type": "gbdt", "colsample_bytree": 0.7000000000000001, "learning_rate": 0.052638947368421056, "max_bin": 63, "max_depth": 8, "min_data_in_leaf": 0.006300382669981896, "min_split_gain": 0.8421052631578947, "n_estimators": 25, "num_leaves": 127, "reg_alpha": 1.05, "reg_lambda": 0.22499999999999998, "subsample": 0.35, "subsample_freq": 4}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "f0ff5fe53787560ee84509b0b210d366a3ca98b5"}
+2019-03-25 23:19:58,987 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-03-25 23:19:58,997 - INFO - 180 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7]CPU logical cores: 2, CPU cores: 2, virtual memory: 4107849728, swap memory: 0.
+2019-03-25 23:19:59,031 - INFO - 186 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7]Platform information: Linux-4.14.29-linuxkit-x86_64-with-debian-stretch-sid.
+2019-03-25 23:19:59,069 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][Starting fit_pipeline]memory usage 273412
+2019-03-25 23:19:59,100 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][Starting fit_pipeline]child memory usage 272684
+2019-03-25 23:19:59,147 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][Starting fit_pipeline]cpu time 73.970343
+2019-03-25 23:19:59,177 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][Starting fit_pipeline]child cpu time 36.153761
+2019-03-25 23:19:59,215 - INFO - 72 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7] X datatype is <class 'numpy.ndarray'>, shape is (19710, 34), datasize is 5361120.
+2019-03-25 23:19:59,289 - INFO - 77 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7] y datatype is <class 'numpy.ndarray'>, shape is (19710,), datasize is 157680.
+2019-03-25 23:19:59,429 - INFO - 83 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7] X_valid datatype is <class 'numpy.ndarray'>, shape is (5025, 34), datasize is 1366800.
+2019-03-25 23:19:59,463 - INFO - 89 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7] y_valid datatype is <class 'numpy.ndarray'>, shape is (5025,), datasize is 40200.
+2019-03-25 23:19:59,495 - INFO - 93 : Using child run AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7
+2019-03-25 23:19:59,531 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][Before preprocess]memory usage 273412
+2019-03-25 23:19:59,573 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][Before preprocess]child memory usage 272684
+2019-03-25 23:19:59,608 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][Before preprocess]cpu time 74.01544
+2019-03-25 23:19:59,642 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][Before preprocess]child cpu time 36.153761
+2019-03-25 23:19:59,700 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][After preprocess]memory usage 273412
+2019-03-25 23:19:59,735 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][After preprocess]child memory usage 272684
+2019-03-25 23:19:59,771 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][After preprocess]cpu time 74.020414
+2019-03-25 23:19:59,804 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][After preprocess]child cpu time 36.153761
+2019-03-25 23:19:59,854 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][Before executing pipeline]memory usage 273412
+2019-03-25 23:19:59,881 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][Before executing pipeline]child memory usage 272684
+2019-03-25 23:19:59,913 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][Before executing pipeline]cpu time 74.039506
+2019-03-25 23:19:59,947 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][Before executing pipeline]child cpu time 36.153761
+2019-03-25 23:19:59,997 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": false, "with_std": false}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LightGBMRegressor", "module": "automl.client.core.common.model_wrappers", "param_args": [], "param_kwargs": {"boosting_type": "gbdt", "colsample_bytree": 0.7000000000000001, "learning_rate": 0.052638947368421056, "max_bin": 63, "max_depth": 8, "min_data_in_leaf": 0.006300382669981896, "min_split_gain": 0.8421052631578947, "n_estimators": 25, "num_leaves": 127, "reg_alpha": 1.05, "reg_lambda": 0.22499999999999998, "subsample": 0.35, "subsample_freq": 4}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "f0ff5fe53787560ee84509b0b210d366a3ca98b5"}.
+2019-03-25 23:20:00,038 - INFO - 143 : Running with the following AutoML settings:
+ - name: automl-ojsalesforecasting
+ - subscription_id: 5d9f0467-1e93-45cb-9531-b2f8e715feb1
+ - iterations: 10
+ - primary_metric: normalized_root_mean_squared_error
+ - compute_target: local
+ - task_type: regression
+ - validation_size: 0.0
+ - n_cross_validations: None
+ - y_min: 64
+ - y_max: 716416
+ - num_classes: None
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: True
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: None
+ - mem_in_mb: None
+ - enforce_time_on_windows: False
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoostRegressor', 'XGBoostRegressor', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - time_column_name: WeekStarting
+ - grain_column_names: ['Store', 'Brand']
+ - drop_column_names: ['logQuantity']
+ - max_horizon: None
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: False
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: minimize
+2019-03-25 23:20:00,080 - INFO - 224 : ActivityStarted: RunPipeline
+2019-03-25 23:20:04,637 - INFO - 140 : ActivityStarted: Run
+2019-03-25 23:20:04,651 - INFO - 140 : ActivityStarted: TrainValid
+2019-03-25 23:20:04,749 - INFO - 140 : ActivityStarted: TimeFit
+2019-03-25 23:20:05,013 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=264.37[ms]
+2019-03-25 23:20:05,025 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-03-25 23:20:05,057 - INFO - 140 : ActivityStarted: Predict
+2019-03-25 23:20:05,120 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=62.9[ms]
+2019-03-25 23:20:05,140 - INFO - 599 : Computing regression metrics
+2019-03-25 23:20:05,214 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=189.46[ms]
+2019-03-25 23:20:05,226 - INFO - 154 : ActivityCompleted: Activity=TrainValid, HowEnded=Success, Duration=574.67[ms]
+2019-03-25 23:20:05,256 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=618.48[ms]
+2019-03-25 23:20:05,827 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=5746.82[ms]
+2019-03-25 23:20:05,836 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][After executing pipeline]memory usage 273412
+2019-03-25 23:20:05,882 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][After executing pipeline]child memory usage 272684
+2019-03-25 23:20:05,914 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][After executing pipeline]cpu time 74.144368
+2019-03-25 23:20:05,945 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][After executing pipeline]child cpu time 39.915088
+2019-03-25 23:20:05,979 - INFO - 161 : Pipeline execution finished with a score of 0.028163338098081702
+2019-03-25 23:20:06,019 - INFO - 162 : Start logging metrics for child run.
+2019-03-25 23:20:06,054 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-03-25 23:20:07,226 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-03-25 23:20:07,237 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-03-25 23:20:07,273 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-03-25 23:20:07,339 - INFO - 267 : The following metrics have been logged for the child run: {'explained_variance': 0.34834805670247526, 'r2_score': 0.34833995929186146, 'spearman_correlation': 0.7028955282344588, 'mean_absolute_error': 10529.744346415919, 'normalized_mean_absolute_error': 0.014699120469288727, 'median_absolute_error': 6286.389612319137, 'normalized_median_absolute_error': 0.00877555951867118, 'root_mean_squared_error': 20174.863573237024, 'normalized_root_mean_squared_error': 0.028163338098081702, 'root_mean_squared_log_error': 0.7656231010134344, 'normalized_root_mean_squared_log_error': 0.08225757441910926, 'predicted_true': <class 'dict'>, 'residuals': <class 'dict'>, 'predict_time': <class 'float'>, 'fit_time': <class 'float'>, 'train time': <class 'float'>}.
+2019-03-25 23:20:07,443 - INFO - 64 : memory usage 273412
+2019-03-25 23:20:07,453 - INFO - 64 : child memory usage 272684
+2019-03-25 23:20:07,488 - INFO - 73 : cpu time 74.630816
+2019-03-25 23:20:07,531 - INFO - 73 : child cpu time 39.915088
+2019-03-25 23:20:08,214 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=2160.55[ms]
+2019-03-25 23:20:09,041 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][End fit_pipeline]memory usage 273412
+2019-03-25 23:20:09,059 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][End fit_pipeline]child memory usage 272684
+2019-03-25 23:20:09,093 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][End fit_pipeline]cpu time 74.820149
+2019-03-25 23:20:09,127 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_7][End fit_pipeline]child cpu time 39.915088
+2019-03-25 23:20:09,247 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=10260.33 [ms]
+2019-03-25 23:20:09,524 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=11997.13 [ms]
+2019-03-25 23:20:09,535 - INFO - 569 : Start iteration: 8
+2019-03-25 23:20:09,570 - INFO - 93 : ActivityStarted, FitIteration
+2019-03-25 23:20:09,618 - INFO - 93 : ActivityStarted, GetPipeline
+2019-03-25 23:20:09,648 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-03-25 23:20:10,444 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=825.43 [ms]
+2019-03-25 23:20:10,454 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "RobustScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"quantile_range": [25, 75], "with_centering": false, "with_scaling": true}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "DecisionTreeRegressor", "module": "sklearn.tree", "param_args": [], "param_kwargs": {"criterion": "mse", "max_features": 0.7, "min_samples_leaf": 0.002742668396429022, "min_samples_split": 0.0075322213975862395, "splitter": "best"}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "f30ea30b17d04540805388afe14957f95be6343a"}
+2019-03-25 23:20:11,015 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-03-25 23:20:11,025 - INFO - 180 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8]CPU logical cores: 2, CPU cores: 2, virtual memory: 4107849728, swap memory: 0.
+2019-03-25 23:20:11,059 - INFO - 186 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8]Platform information: Linux-4.14.29-linuxkit-x86_64-with-debian-stretch-sid.
+2019-03-25 23:20:11,092 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][Starting fit_pipeline]memory usage 273412
+2019-03-25 23:20:11,127 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][Starting fit_pipeline]child memory usage 272684
+2019-03-25 23:20:11,159 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][Starting fit_pipeline]cpu time 74.963336
+2019-03-25 23:20:11,193 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][Starting fit_pipeline]child cpu time 39.915088
+2019-03-25 23:20:11,226 - INFO - 72 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8] X datatype is <class 'numpy.ndarray'>, shape is (19710, 34), datasize is 5361120.
+2019-03-25 23:20:11,284 - INFO - 77 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8] y datatype is <class 'numpy.ndarray'>, shape is (19710,), datasize is 157680.
+2019-03-25 23:20:11,351 - INFO - 83 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8] X_valid datatype is <class 'numpy.ndarray'>, shape is (5025, 34), datasize is 1366800.
+2019-03-25 23:20:11,433 - INFO - 89 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8] y_valid datatype is <class 'numpy.ndarray'>, shape is (5025,), datasize is 40200.
+2019-03-25 23:20:11,464 - INFO - 93 : Using child run AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8
+2019-03-25 23:20:11,505 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][Before preprocess]memory usage 273412
+2019-03-25 23:20:11,541 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][Before preprocess]child memory usage 272684
+2019-03-25 23:20:11,579 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][Before preprocess]cpu time 75.004181
+2019-03-25 23:20:11,627 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][Before preprocess]child cpu time 39.915088
+2019-03-25 23:20:11,717 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][After preprocess]memory usage 273412
+2019-03-25 23:20:11,750 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][After preprocess]child memory usage 272684
+2019-03-25 23:20:11,781 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][After preprocess]cpu time 75.020355
+2019-03-25 23:20:11,819 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][After preprocess]child cpu time 39.915088
+2019-03-25 23:20:11,881 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][Before executing pipeline]memory usage 273412
+2019-03-25 23:20:11,941 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][Before executing pipeline]child memory usage 272684
+2019-03-25 23:20:11,985 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][Before executing pipeline]cpu time 75.036869
+2019-03-25 23:20:12,043 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][Before executing pipeline]child cpu time 39.915088
+2019-03-25 23:20:12,074 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "RobustScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"quantile_range": [25, 75], "with_centering": false, "with_scaling": true}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "DecisionTreeRegressor", "module": "sklearn.tree", "param_args": [], "param_kwargs": {"criterion": "mse", "max_features": 0.7, "min_samples_leaf": 0.002742668396429022, "min_samples_split": 0.0075322213975862395, "splitter": "best"}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "f30ea30b17d04540805388afe14957f95be6343a"}.
+2019-03-25 23:20:12,120 - INFO - 143 : Running with the following AutoML settings:
+ - name: automl-ojsalesforecasting
+ - subscription_id: 5d9f0467-1e93-45cb-9531-b2f8e715feb1
+ - iterations: 10
+ - primary_metric: normalized_root_mean_squared_error
+ - compute_target: local
+ - task_type: regression
+ - validation_size: 0.0
+ - n_cross_validations: None
+ - y_min: 64
+ - y_max: 716416
+ - num_classes: None
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: True
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: None
+ - mem_in_mb: None
+ - enforce_time_on_windows: False
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoostRegressor', 'XGBoostRegressor', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - time_column_name: WeekStarting
+ - grain_column_names: ['Store', 'Brand']
+ - drop_column_names: ['logQuantity']
+ - max_horizon: None
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: False
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: minimize
+2019-03-25 23:20:12,152 - INFO - 224 : ActivityStarted: RunPipeline
+2019-03-25 23:20:16,761 - INFO - 140 : ActivityStarted: Run
+2019-03-25 23:20:16,770 - INFO - 140 : ActivityStarted: TrainValid
+2019-03-25 23:20:16,852 - INFO - 140 : ActivityStarted: TimeFit
+2019-03-25 23:20:17,037 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=184.66[ms]
+2019-03-25 23:20:17,046 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-03-25 23:20:17,078 - INFO - 140 : ActivityStarted: Predict
+2019-03-25 23:20:17,116 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=37.39[ms]
+2019-03-25 23:20:17,148 - INFO - 599 : Computing regression metrics
+2019-03-25 23:20:17,197 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=151.09[ms]
+2019-03-25 23:20:17,214 - INFO - 154 : ActivityCompleted: Activity=TrainValid, HowEnded=Success, Duration=443.36[ms]
+2019-03-25 23:20:17,248 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=486.76[ms]
+2019-03-25 23:20:17,568 - INFO - 64 : memory usage 273412
+2019-03-25 23:20:17,584 - INFO - 64 : child memory usage 272684
+2019-03-25 23:20:17,627 - INFO - 73 : cpu time 75.123102
+2019-03-25 23:20:17,670 - INFO - 73 : child cpu time 39.915088
+2019-03-25 23:20:17,721 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=5568.84[ms]
+2019-03-25 23:20:17,827 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][After executing pipeline]memory usage 273412
+2019-03-25 23:20:17,880 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][After executing pipeline]child memory usage 272684
+2019-03-25 23:20:17,926 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][After executing pipeline]cpu time 75.171099
+2019-03-25 23:20:17,975 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][After executing pipeline]child cpu time 43.784417
+2019-03-25 23:20:18,016 - INFO - 161 : Pipeline execution finished with a score of 0.02788327333760713
+2019-03-25 23:20:18,074 - INFO - 162 : Start logging metrics for child run.
+2019-03-25 23:20:18,123 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-03-25 23:20:19,288 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-03-25 23:20:19,306 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-03-25 23:20:19,355 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-03-25 23:20:19,403 - INFO - 267 : The following metrics have been logged for the child run: {'explained_variance': 0.3624135931040232, 'r2_score': 0.36123612664835314, 'spearman_correlation': 0.5568531491807536, 'mean_absolute_error': 10419.51701605094, 'normalized_mean_absolute_error': 0.014545247330992222, 'median_absolute_error': 4451.147540983607, 'normalized_median_absolute_error': 0.006213631763411852, 'root_mean_squared_error': 19974.238621941542, 'normalized_root_mean_squared_error': 0.02788327333760713, 'root_mean_squared_log_error': 0.7644791419723608, 'normalized_root_mean_squared_log_error': 0.08213466891138754, 'residuals': <class 'dict'>, 'predicted_true': <class 'dict'>, 'predict_time': <class 'float'>, 'fit_time': <class 'float'>, 'train time': <class 'float'>}.
+2019-03-25 23:20:20,233 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=2109.47[ms]
+2019-03-25 23:20:21,010 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][End fit_pipeline]memory usage 273412
+2019-03-25 23:20:21,019 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][End fit_pipeline]child memory usage 272684
+2019-03-25 23:20:21,057 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][End fit_pipeline]cpu time 75.852791
+2019-03-25 23:20:21,096 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_8][End fit_pipeline]child cpu time 43.784417
+2019-03-25 23:20:21,136 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=10121.65 [ms]
+2019-03-25 23:20:21,389 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=11819.17 [ms]
+2019-03-25 23:20:21,404 - INFO - 569 : Start iteration: 9
+2019-03-25 23:20:21,442 - INFO - 93 : ActivityStarted, FitIteration
+2019-03-25 23:20:21,475 - INFO - 93 : ActivityStarted, GetPipeline
+2019-03-25 23:20:21,516 - INFO - 829 : Querying Jasmine for next pipeline.
+2019-03-25 23:20:22,332 - INFO - 114 : ActivityCompleted: Activity=GetPipeline, HowEnded=Success, Duration=856.82 [ms]
+2019-03-25 23:20:22,341 - INFO - 612 : Received pipeline: {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": false, "with_std": false}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LightGBMRegressor", "module": "automl.client.core.common.model_wrappers", "param_args": [], "param_kwargs": {"boosting_type": "gbdt", "colsample_bytree": 0.7000000000000001, "learning_rate": 0.08421631578947368, "max_bin": 63, "max_depth": 6, "min_data_in_leaf": 0.001953125, "min_split_gain": 0.3157894736842105, "n_estimators": 50, "num_leaves": 63, "reg_alpha": 0.6749999999999999, "reg_lambda": 0.15, "subsample": 0.6, "subsample_freq": 6}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "45fb204793f854089377519b31fd47890a070a9a"}
+2019-03-25 23:20:22,853 - INFO - 93 : ActivityStarted, fit_pipeline
+2019-03-25 23:20:22,864 - INFO - 180 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9]CPU logical cores: 2, CPU cores: 2, virtual memory: 4107849728, swap memory: 0.
+2019-03-25 23:20:22,922 - INFO - 186 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9]Platform information: Linux-4.14.29-linuxkit-x86_64-with-debian-stretch-sid.
+2019-03-25 23:20:22,973 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][Starting fit_pipeline]memory usage 273412
+2019-03-25 23:20:23,036 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][Starting fit_pipeline]child memory usage 272684
+2019-03-25 23:20:23,079 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][Starting fit_pipeline]cpu time 76.027924
+2019-03-25 23:20:23,114 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][Starting fit_pipeline]child cpu time 43.784417
+2019-03-25 23:20:23,164 - INFO - 72 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9] X datatype is <class 'numpy.ndarray'>, shape is (19710, 34), datasize is 5361120.
+2019-03-25 23:20:23,203 - INFO - 77 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9] y datatype is <class 'numpy.ndarray'>, shape is (19710,), datasize is 157680.
+2019-03-25 23:20:23,271 - INFO - 83 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9] X_valid datatype is <class 'numpy.ndarray'>, shape is (5025, 34), datasize is 1366800.
+2019-03-25 23:20:23,305 - INFO - 89 : [ParentRunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9] y_valid datatype is <class 'numpy.ndarray'>, shape is (5025,), datasize is 40200.
+2019-03-25 23:20:23,364 - INFO - 93 : Using child run AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9
+2019-03-25 23:20:23,435 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][Before preprocess]memory usage 273412
+2019-03-25 23:20:23,467 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][Before preprocess]child memory usage 272684
+2019-03-25 23:20:23,498 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][Before preprocess]cpu time 76.059263
+2019-03-25 23:20:23,531 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][Before preprocess]child cpu time 43.784417
+2019-03-25 23:20:23,567 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][After preprocess]memory usage 273412
+2019-03-25 23:20:23,626 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][After preprocess]child memory usage 272684
+2019-03-25 23:20:23,664 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][After preprocess]cpu time 76.073651
+2019-03-25 23:20:23,697 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][After preprocess]child cpu time 43.784417
+2019-03-25 23:20:23,740 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][Before executing pipeline]memory usage 273412
+2019-03-25 23:20:23,774 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][Before executing pipeline]child memory usage 272684
+2019-03-25 23:20:23,813 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][Before executing pipeline]cpu time 76.090105
+2019-03-25 23:20:23,853 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][Before executing pipeline]child cpu time 43.784417
+2019-03-25 23:20:23,894 - INFO - 141 : Start executing pipeline {"objects": [{"class_name": "StandardScaler", "module": "sklearn.preprocessing", "param_args": [], "param_kwargs": {"with_mean": false, "with_std": false}, "prepared_kwargs": {}, "spec_class": "preproc"}, {"class_name": "LightGBMRegressor", "module": "automl.client.core.common.model_wrappers", "param_args": [], "param_kwargs": {"boosting_type": "gbdt", "colsample_bytree": 0.7000000000000001, "learning_rate": 0.08421631578947368, "max_bin": 63, "max_depth": 6, "min_data_in_leaf": 0.001953125, "min_split_gain": 0.3157894736842105, "n_estimators": 50, "num_leaves": 63, "reg_alpha": 0.6749999999999999, "reg_lambda": 0.15, "subsample": 0.6, "subsample_freq": 6}, "prepared_kwargs": {}, "spec_class": "sklearn"}], "pipeline_id": "45fb204793f854089377519b31fd47890a070a9a"}.
+2019-03-25 23:20:23,931 - INFO - 143 : Running with the following AutoML settings:
+ - name: automl-ojsalesforecasting
+ - subscription_id: 5d9f0467-1e93-45cb-9531-b2f8e715feb1
+ - iterations: 10
+ - primary_metric: normalized_root_mean_squared_error
+ - compute_target: local
+ - task_type: regression
+ - validation_size: 0.0
+ - n_cross_validations: None
+ - y_min: 64
+ - y_max: 716416
+ - num_classes: None
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: True
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: None
+ - mem_in_mb: None
+ - enforce_time_on_windows: False
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoostRegressor', 'XGBoostRegressor', 'KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - time_column_name: WeekStarting
+ - grain_column_names: ['Store', 'Brand']
+ - drop_column_names: ['logQuantity']
+ - max_horizon: None
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: False
+ - ensemble_iterations: 10
+ - enable_tf: True
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: minimize
+2019-03-25 23:20:23,994 - INFO - 224 : ActivityStarted: RunPipeline
+2019-03-25 23:20:27,716 - INFO - 64 : memory usage 273412
+2019-03-25 23:20:27,719 - INFO - 64 : child memory usage 272684
+2019-03-25 23:20:27,759 - INFO - 73 : cpu time 76.170451
+2019-03-25 23:20:27,817 - INFO - 73 : child cpu time 43.784417
+2019-03-25 23:20:28,737 - INFO - 140 : ActivityStarted: Run
+2019-03-25 23:20:28,748 - INFO - 140 : ActivityStarted: TrainValid
+2019-03-25 23:20:28,817 - INFO - 140 : ActivityStarted: TimeFit
+2019-03-25 23:20:29,185 - INFO - 154 : ActivityCompleted: Activity=TimeFit, HowEnded=Success, Duration=367.58[ms]
+2019-03-25 23:20:29,195 - INFO - 140 : ActivityStarted: ComputeMetrics
+2019-03-25 23:20:29,236 - INFO - 140 : ActivityStarted: Predict
+2019-03-25 23:20:29,286 - INFO - 154 : ActivityCompleted: Activity=Predict, HowEnded=Success, Duration=50.35[ms]
+2019-03-25 23:20:29,302 - INFO - 599 : Computing regression metrics
+2019-03-25 23:20:29,355 - INFO - 154 : ActivityCompleted: Activity=ComputeMetrics, HowEnded=Success, Duration=160.34[ms]
+2019-03-25 23:20:29,386 - INFO - 154 : ActivityCompleted: Activity=TrainValid, HowEnded=Success, Duration=638.62[ms]
+2019-03-25 23:20:29,460 - INFO - 154 : ActivityCompleted: Activity=Run, HowEnded=Success, Duration=722.38[ms]
+2019-03-25 23:20:30,114 - INFO - 238 : ActivityCompleted: Activity=RunPipeline, HowEnded=Success, Duration=6119.59[ms]
+2019-03-25 23:20:30,124 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][After executing pipeline]memory usage 273412
+2019-03-25 23:20:30,161 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][After executing pipeline]child memory usage 272684
+2019-03-25 23:20:30,211 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][After executing pipeline]cpu time 76.198764
+2019-03-25 23:20:30,268 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][After executing pipeline]child cpu time 47.913677
+2019-03-25 23:20:30,343 - INFO - 161 : Pipeline execution finished with a score of 0.02727307842224486
+2019-03-25 23:20:30,544 - INFO - 162 : Start logging metrics for child run.
+2019-03-25 23:20:30,579 - INFO - 224 : ActivityStarted: MetricsAndSaveModel
+2019-03-25 23:20:31,618 - WARNING - 285 : Did not recognize metric: predict_time. Will not log.
+2019-03-25 23:20:31,630 - WARNING - 285 : Did not recognize metric: fit_time. Will not log.
+2019-03-25 23:20:31,678 - WARNING - 285 : Did not recognize metric: train time. Will not log.
+2019-03-25 23:20:31,733 - INFO - 267 : The following metrics have been logged for the child run: {'explained_variance': 0.38902394721745914, 'r2_score': 0.3888875155618493, 'spearman_correlation': 0.7120529338805324, 'mean_absolute_error': 9760.897851744994, 'normalized_mean_absolute_error': 0.013625840162022293, 'median_absolute_error': 4076.9646616162445, 'normalized_median_absolute_error': 0.005691286771889022, 'root_mean_squared_error': 19537.12427393195, 'normalized_root_mean_squared_error': 0.02727307842224486, 'root_mean_squared_log_error': 0.6718123985242886, 'normalized_root_mean_squared_log_error': 0.0721786715867685, 'predicted_true': <class 'dict'>, 'residuals': <class 'dict'>, 'predict_time': <class 'float'>, 'fit_time': <class 'float'>, 'train time': <class 'float'>}.
+2019-03-25 23:20:32,674 - INFO - 238 : ActivityCompleted: Activity=MetricsAndSaveModel, HowEnded=Success, Duration=2094.48[ms]
+2019-03-25 23:20:33,586 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][End fit_pipeline]memory usage 273412
+2019-03-25 23:20:33,596 - INFO - 64 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][End fit_pipeline]child memory usage 272684
+2019-03-25 23:20:33,632 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][End fit_pipeline]cpu time 76.884011
+2019-03-25 23:20:33,675 - INFO - 73 : [RunId:AutoML_1c5c59c3-cad5-440a-92ba-adbba5d6b846_9][End fit_pipeline]child cpu time 47.913677
+2019-03-25 23:20:33,719 - INFO - 114 : ActivityCompleted: Activity=fit_pipeline, HowEnded=Success, Duration=10865.74 [ms]
+2019-03-25 23:20:34,072 - INFO - 114 : ActivityCompleted: Activity=FitIteration, HowEnded=Success, Duration=12629.72 [ms]
+2019-03-25 23:20:35,150 - INFO - 600 : Run Complete.
