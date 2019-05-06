@@ -1,0 +1,118 @@
+2019-01-28 21:05:10,542 - INFO - 189 : Starting usage telemetry collection
+2019-01-28 21:05:18,938 - INFO - 832 : Start creating parent run with DTO:  - name: contoso-regression
+ - subscription_id: 2a779d6f-0806-4359-a6e8-f1fd57bb5dd7
+ - iterations: 10
+ - primary_metric: normalized_root_mean_squared_error
+ - compute_target: contoso-cluster
+ - task_type: regression
+ - validation_size: 0.0
+ - n_cross_validations: 5
+ - y_min: None
+ - y_max: None
+ - num_classes: None
+ - preprocess: True
+ - lag_length: 0
+ - is_timeseries: False
+ - max_cores_per_iteration: 10
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: 10
+ - mem_in_mb: None
+ - enforce_time_on_windows: False
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 10
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: True
+ - ensemble_iterations: 10
+ - enable_tf: False
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: minimize.
+2019-01-28 21:05:20,517 - INFO - 844 : [ParentRunID:AutoML_665d5104-eb49-480c-aea7-aecd07b2c9fb] Remote run using user script.
+2019-01-28 21:05:20,594 - INFO - 76 : memory usage 259332
+2019-01-28 21:05:20,697 - INFO - 76 : child memory usage 655112
+2019-01-28 21:05:20,769 - INFO - 85 : cpu time 503.215494
+2019-01-28 21:05:20,885 - INFO - 85 : child cpu time 437.971441
+2019-01-28 21:05:21,630 - INFO - 530 : [RunId:AutoML_665d5104-eb49-480c-aea7-aecd07b2c9fb]SDK dependencies versions:{"azureml-widgets": "1.0.8", "azureml-webservice-schema": "1.0.8", "azureml-train": "1.0.8", "azureml-train-restclients-hyperdrive": "1.0.8", "azureml-train-core": "1.0.8", "azureml-train-automl": "1.0.8", "azureml-telemetry": "1.0.8", "azureml-sdk": "1.0.8", "azureml-pipeline": "1.0.8", "azureml-pipeline-steps": "1.0.8", "azureml-pipeline-core": "1.0.8", "azureml-explain-model": "1.0.8", "azureml-dataprep": "1.0.7", "azureml-dataprep-native": "11.2.1", "azureml-core": "1.0.8"}.
+2019-01-28 21:05:22,619 - INFO - 855 : Parent Run ID: AutoML_665d5104-eb49-480c-aea7-aecd07b2c9fb
+2019-01-28 21:05:27,731 - INFO - 859 : Snapshotted folder: ./contoso-regression with snapshot_id: 6ac4b075-11ae-4c4a-ac0b-c295d8ec151e
+2019-01-28 21:05:27,759 - INFO - 873 : Starting a snapshot run (snapshotId : 6ac4b075-11ae-4c4a-ac0b-c295d8ec151e) with following compute definition: {'Configuration': {'script': 'train.py', 'arguments': [], 'target': 'contoso-cluster', 'framework': 'Python', 'communicator': 'None', 'autoPrepareEnvironment': True, 'maxRunDurationSeconds': None, 'nodeCount': 1, 'environment': {'environmentVariables': {'EXAMPLE_ENV_VAR': 'EXAMPLE_VALUE'}, 'python': {'userManagedDependencies': False, 'interpreterPath': 'python', 'condaDependencies': CommentedMap([('name', 'project_environment'), ('dependencies', ['python=3.6.2', CommentedMap([('pip', ['azureml-defaults==1.0.8', 'azureml-train-automl==1.0.8', 'azureml-explain-model'])]), 'numpy'])])}, 'docker': {'enabled': True, 'baseImage': 'mcr.microsoft.com/azureml/base:0.2.1', 'sharedVolumes': True, 'gpuSupport': False, 'arguments': [], 'baseImageRegistry': {'address': None, 'username': None, 'password': None}}, 'spark': {'repositories': ['https://mmlspark.azureedge.net/maven'], 'packages': [{'group': 'com.microsoft.ml.spark', 'artifact': 'mmlspark_2.11', 'version': '0.12'}], 'precachePackages': True}, 'databricks': {'mavenLibraries': [], 'pypiLibraries': [], 'rcranLibraries': [], 'jarLibraries': [], 'eggLibraries': []}}, 'history': {'outputCollection': True, 'snapshotProject': True}, 'spark': {'configuration': {'spark.app.name': 'Azure ML Experiment', 'spark.yarn.maxAppAttempts': 1}}, 'hdi': {'yarnDeployMode': 'cluster'}, 'tensorflow': {'workerCount': 1, 'parameterServerCount': 1}, 'mpi': {'processCountPerNode': 1}, 'dataReferences': {}, 'sourceDirectoryDataStore': None, 'amlcompute': {'vmSize': None, 'vmPriority': None, 'retainCluster': False, 'name': None, 'clusterMaxNodeCount': 1}}}
+2019-01-28 21:05:31,081 - INFO - 76 : memory usage 259332
+2019-01-28 21:05:31,123 - INFO - 76 : child memory usage 655112
+2019-01-28 21:05:31,216 - INFO - 85 : cpu time 504.551015
+2019-01-28 21:05:31,307 - INFO - 85 : child cpu time 437.971441
+2019-02-06 20:30:39,349 - INFO - 189 : Starting usage telemetry collection
+2019-02-06 20:30:46,185 - INFO - 832 : Start creating parent run with DTO:  - name: contoso-regression
+ - subscription_id: 2a779d6f-0806-4359-a6e8-f1fd57bb5dd7
+ - iterations: 10
+ - primary_metric: normalized_root_mean_squared_error
+ - compute_target: contoso-cluster
+ - task_type: regression
+ - validation_size: 0.0
+ - n_cross_validations: 5
+ - y_min: None
+ - y_max: None
+ - num_classes: None
+ - preprocess: True
+ - lag_length: 0
+ - is_timeseries: False
+ - max_cores_per_iteration: 10
+ - max_concurrent_iterations: 1
+ - iteration_timeout_minutes: 10
+ - mem_in_mb: None
+ - enforce_time_on_windows: False
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['KNeighborsClassifier', 'KNeighborsRegressor', 'SVCWrapper', 'kNN', 'kNN regressor', 'SVM']
+ - auto_blacklist: True
+ - blacklist_samples_reached: True
+ - exclude_nan_labels: True
+ - verbosity: 10
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - spark_context: None
+ - spark_service: None
+ - metrics: None
+ - enable_ensembling: True
+ - ensemble_iterations: 10
+ - enable_tf: False
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: minimize.
+2019-02-06 20:30:48,645 - INFO - 844 : [ParentRunID:AutoML_c2f31023-e85b-4182-8913-08f15eb2c4a2] Remote run using user script.
+2019-02-06 20:30:49,262 - INFO - 530 : [RunId:AutoML_c2f31023-e85b-4182-8913-08f15eb2c4a2]SDK dependencies versions:{"azureml-widgets": "1.0.8", "azureml-train": "1.0.8", "azureml-train-restclients-hyperdrive": "1.0.8", "azureml-train-core": "1.0.8", "azureml-train-automl": "1.0.8", "azureml-telemetry": "1.0.8", "azureml-sdk": "1.0.8", "azureml-pipeline": "1.0.8", "azureml-pipeline-steps": "1.0.8", "azureml-pipeline-core": "1.0.8", "azureml-explain-model": "1.0.8", "azureml-dataprep": "1.0.7", "azureml-dataprep-native": "11.2.1", "azureml-core": "1.0.8"}.
+2019-02-06 20:30:49,363 - INFO - 76 : memory usage 260168
+2019-02-06 20:30:49,385 - INFO - 76 : child memory usage 184236
+2019-02-06 20:30:49,495 - INFO - 85 : cpu time 33.220609
+2019-02-06 20:30:49,591 - INFO - 85 : child cpu time 1.343776
+2019-02-06 20:30:49,593 - INFO - 855 : Parent Run ID: AutoML_c2f31023-e85b-4182-8913-08f15eb2c4a2
+2019-02-06 20:30:53,723 - INFO - 859 : Snapshotted folder: ./contoso-regression with snapshot_id: fae70fc1-2d93-4f69-8288-aa34fb90cd92
+2019-02-06 20:30:53,755 - INFO - 873 : Starting a snapshot run (snapshotId : fae70fc1-2d93-4f69-8288-aa34fb90cd92) with following compute definition: {'Configuration': {'script': 'train.py', 'arguments': [], 'target': 'contoso-cluster', 'framework': 'Python', 'communicator': 'None', 'autoPrepareEnvironment': True, 'maxRunDurationSeconds': None, 'nodeCount': 1, 'environment': {'environmentVariables': {'EXAMPLE_ENV_VAR': 'EXAMPLE_VALUE'}, 'python': {'userManagedDependencies': False, 'interpreterPath': 'python', 'condaDependencies': CommentedMap([('name', 'project_environment'), ('dependencies', ['python=3.6.2', CommentedMap([('pip', ['azureml-defaults==1.0.8', 'azureml-train-automl==1.0.8', 'azureml-explain-model'])]), 'numpy'])])}, 'docker': {'enabled': True, 'baseImage': 'mcr.microsoft.com/azureml/base:0.2.1', 'sharedVolumes': True, 'gpuSupport': False, 'arguments': [], 'baseImageRegistry': {'address': None, 'username': None, 'password': None}}, 'spark': {'repositories': ['https://mmlspark.azureedge.net/maven'], 'packages': [{'group': 'com.microsoft.ml.spark', 'artifact': 'mmlspark_2.11', 'version': '0.12'}], 'precachePackages': True}, 'databricks': {'mavenLibraries': [], 'pypiLibraries': [], 'rcranLibraries': [], 'jarLibraries': [], 'eggLibraries': []}}, 'history': {'outputCollection': True, 'snapshotProject': True}, 'spark': {'configuration': {'spark.app.name': 'Azure ML Experiment', 'spark.yarn.maxAppAttempts': 1}}, 'hdi': {'yarnDeployMode': 'cluster'}, 'tensorflow': {'workerCount': 1, 'parameterServerCount': 1}, 'mpi': {'processCountPerNode': 1}, 'dataReferences': {}, 'sourceDirectoryDataStore': None, 'amlcompute': {'vmSize': None, 'vmPriority': None, 'retainCluster': False, 'name': None, 'clusterMaxNodeCount': 1}}}
+2019-02-06 20:30:59,678 - INFO - 76 : memory usage 260168
+2019-02-06 20:30:59,715 - INFO - 76 : child memory usage 184236
+2019-02-06 20:30:59,791 - INFO - 85 : cpu time 33.651821
+2019-02-06 20:30:59,845 - INFO - 85 : child cpu time 1.343776
